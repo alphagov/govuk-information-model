@@ -1,5 +1,5 @@
 # GOV.UK Information Model
-The GOV.UK Information Model contains the **canonical** information model for GOV.UK. It describes the information **conceptual** infrastructure for GOV.UK. This in turn provides the underpinning for GOV.UK content and AI.
+The GOV.UK Information Model contains the **canonical** information model for GOV.UK. It describes the information **conceptual** infrastructure for GOV.UK.
 
 The Information Model consists of a set of [OWL](https://www.w3.org/OWL/) text files that describe: 
 - **Domain ontologies**. All the objects (classes and sub-classes) and the properties/attributes, for each domain. The domain describes the **canonical** objects for that domain. _E.g. Visa Domain_.
@@ -7,3 +7,5 @@ The Information Model consists of a set of [OWL](https://www.w3.org/OWL/) text f
 - **Taxonomies**. All Taxonomies used and all their taxons. The taxonomies exist in domains and content objects but are collected in one place for ease of management. _E.g. Language Taxonomy_.
 
 Other supporting files are be stored in this repo. These provide documentation, model validation scripts, model export scripts, and other files as needed.
+
+The OWL files are accessed using the public domain ontology editor [Protégé](https://protege.stanford.edu/).
