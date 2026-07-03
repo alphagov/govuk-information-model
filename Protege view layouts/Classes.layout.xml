@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <VSNode splits="0.45443307083908685 0.5455669291609132">
+        <HSNode splits="0.003094948660021719">
+            <VSNode splits="7.737371650054297E-4">
+                <CNode>
+                    <Component label="Class hierarchy">
+                        <Property id="pluginId" value="org.protege.editor.owl.OWLAssertedClassHierarchy"/>
+                    </Component>
+                    <Component label="Imported ontologies">
+                        <Property id="pluginId" value="org.protege.editor.owl.OWLOntologyImportsTable"/>
+                    </Component>
+                </CNode>
+            </VSNode>
+        </HSNode>
+        <HSNode splits="0.06038467007963596">
+            <CNode>
+                <Component label="Annotations">
+                    <Property id="pluginId" value="org.protege.editor.owl.OWLClassAnnotations"/>
+                </Component>
+                <Component label="Usage">
+                    <Property id="pluginId" value="org.protege.editor.owl.OWLClassUsageView"/>
+                </Component>
+                <Component label="Description">
+                    <Property id="pluginId" value="org.protege.editor.owl.OWLClassDescription"/>
+                </Component>
+            </CNode>
+        </HSNode>
+    </VSNode>
+</layout>
