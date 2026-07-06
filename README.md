@@ -18,7 +18,7 @@ The OWL ontology files are accessed using the public domain ontology editor [Pro
 |`Taxonomy*.rdf`|The taxonomy definitions, one file per taxonomy. Each taxonomy file is included in the root information model file. |
 | `SHACL/*.ttl`|A folder of [SHACL](https://www.w3.org/TR/shacl/) validation files.|
 |`XSLT/*.xslt`|A folder of [XSLT](https://en.wikipedia.org/wiki/XSLT) files used for detailed validation and information mode exports.|
-| `Protege view layouts/*.xml`| Optional view layouts for the Protégé user interface. One file per view. |
+| `ProtegeViewLayouts/*.xml`| Optional view layouts for the Protégé user interface. One file per view. |
 
 ## Related GitHub Repos ##
 [Ontology Generation](https://github.com/alphagov/govuk-ai-accelerator/blob/main/docs/architecture/cross-repo-integration.md). Also see the associated [Confluence pages](https://gov-uk.atlassian.net/wiki/spaces/GOVUK/pages/5507776528/Ontology+Generator+run+books).
