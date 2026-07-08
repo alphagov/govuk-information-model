@@ -13,9 +13,10 @@ The OWL ontology files are accessed using the public domain ontology editor [Pro
 ## Repo Structure ##
 | File | Description |
 |:------|:-----|
-|`GOVUKOntology.rdf`| The root ontology/information model. The separate ontology files that comprise the information model are embedded in this file. |
-|`Domain*.rdf`|The domain definitions, one file per domain. Each domain file is included in the root information model file. |
-|`Taxonomy*.rdf`|The taxonomy definitions, one file per taxonomy. Each taxonomy file is included in the root information model file. |
+|`GOVUKOntology.rdf`| The root ontology (information model). The separate ontology files that comprise the overall ontology are imported into this file. |
+|`Domain*.rdf`|The domain definitions, one file per domain. Each domain file is included in the root ontology file. The `DomainTemplate.rdf` file should be copied for new domains - see the [guide](https://gov-uk.atlassian.net/wiki/spaces/GIA/pages/edit-v2/5566988289) on how to do this.|
+|`Taxonomy*.rdf`|The taxonomy definitions, one file per taxonomy. Each taxonomy file is included in the root ontology file. The `TaxonomyTemplate.rdf` file should be copied for new taxonomy - see the [guide](https://gov-uk.atlassian.net/wiki/spaces/GIA/pages/edit-v2/5566988289) on how to do this.|
+|`ContentBlock*.rdf`|The content block definitions, one file per content block. Each content block file is included in the root ontology file. The `ContrentBlockTemplate.rdf` file should be copied for new content block - see the [guide](https://gov-uk.atlassian.net/wiki/spaces/GIA/pages/edit-v2/5566988289) on how to do this.|
 | `SHACL/*.ttl`|A folder of [SHACL](https://www.w3.org/TR/shacl/) validation files.|
 |`XSLT/*.xslt`|A folder of [XSLT](https://en.wikipedia.org/wiki/XSLT) files used for detailed validation and information mode exports.|
 | `ProtegeViewLayouts/*.xml`| Optional view layouts for the Protégé user interface. One file per view. |
