@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.gov.uk/IA/Ontology#"
+     xml:base="http://www.gov.uk/IA/Ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:gds="http://www.gov.uk/IA/gds:"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.gov.uk/IA/Ontology">
+        <owl:versionIRI rdf:resource="http://www.gov.uk/IA/Ontology/DataProperties"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://www.gov.uk/IA/gds:application -->
+
+    <owl:AnnotationProperty rdf:about="http://www.gov.uk/IA/gds:application">
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-08T15:28:23Z</dc:date>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Button -->
+
+    <rdfs:Datatype rdf:about="http://www.gov.uk/IA/Ontology#Button">
+        <rdfs:label xml:lang="en-gb">Button</rdfs:label>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Tab -->
+
+    <rdfs:Datatype rdf:about="http://www.gov.uk/IA/Ontology#Tab"/>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Value -->
+
+    <rdfs:Datatype rdf:about="http://www.gov.uk/IA/Ontology#Value"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#hasChild -->
+
+    <owl:ObjectProperty rdf:about="http://www.gov.uk/IA/Ontology#hasChild">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#hasOccurrences -->
+
+    <owl:ObjectProperty rdf:about="http://www.gov.uk/IA/Ontology#hasOccurrences"/>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#hasSoftwareType -->
+
+    <owl:ObjectProperty rdf:about="http://www.gov.uk/IA/Ontology#hasSoftwareType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-09T15:36:07Z</dc:date>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#hasSynonym -->
+
+    <owl:ObjectProperty rdf:about="http://www.gov.uk/IA/Ontology#hasSynonym">
+        <owl:inverseOf rdf:resource="http://www.gov.uk/IA/Ontology#isSynonymOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#isSynonymOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.gov.uk/IA/Ontology#isSynonymOf"/>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#managedByApplication -->
+
+    <owl:ObjectProperty rdf:about="http://www.gov.uk/IA/Ontology#managedByApplication">
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-08T15:33:02Z</dc:date>
+        <rdfs:comment>The application used to manage this thing.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#hasDatatype -->
+
+    <owl:DatatypeProperty rdf:about="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment xml:lang="en-gb">This (empty) ontology is used to define Object properties, Data properties, Annotation properties, and Datatypes only. This ontology file is imported into each ontology component file (domains, content component, taxonomy).</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
