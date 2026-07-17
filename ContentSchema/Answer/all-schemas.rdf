@@ -1,0 +1,479 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.gov.uk/IA/Ontology/ContentType#"
+xml:base="http://www.gov.uk/IA/Ontology/ContentType"
+xmlns:gds="http://www.gov.uk/IA/Ontology#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:xml="http://www.w3.org/XML/1998/namespace"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<owl:Ontology rdf:about="http://www.gov.uk/IA/Ontology/ContentType">
+	<owl:versionIRI rdf:resource="http://www.gov.uk/IA/Ontology/ContentType"/>
+</owl:Ontology>
+
+<owl:AnnotationProperty rdf:about="http://www.gov.uk/IA/Ontology#pattern"/>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer">
+	<gds:inputfile xml:lang="en-gb">answerfrontendschema.xml</gds:inputfile>
+	<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentType"/>
+	<dc:creator>Marc Stephenson</dc:creator>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:16:57Z</dc:date>
+	<rdfs:label xml:lang="en-gb">Answer</rdfs:label>
+	<gds:schema xml:lang="en-gb">http://json-schema.org/draft-04/schema#</gds:schema>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesAnalyticsIdentifier">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/analytics_identifier</gds:sourcenode>
+				<gds:ref>#/definitions/analytics_identifier</gds:ref>
+			<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesBasePath">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/base_path</gds:sourcenode>
+				<gds:ref>#/definitions/absolute_path</gds:ref>
+			<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesContentId">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/content_id</gds:sourcenode>
+				<gds:ref>#/definitions/guid</gds:ref>
+			<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesDescription">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/description</gds:sourcenode>
+				<gds:ref>#/definitions/description_optional</gds:ref>
+			<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesDetails">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/details</gds:sourcenode>
+				<gds:ref>#/definitions/details</gds:ref>
+			<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesDocumentType">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/document_type</gds:sourcenode>
+			<gds:type>string</gds:type>
+				<gds:enum>answer;
+			</gds:enum>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesLocale">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/locale</gds:sourcenode>
+				<gds:ref>#/definitions/locale</gds:ref>
+			<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesPhase">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/phase</gds:sourcenode>
+	<gds:description>The service design phase of this content item - https//www.gov.uk/service-manual/phases [Note: colons removed to fix Protege bug]</gds:description>
+		<gds:type>string</gds:type>
+				<gds:enum>alpha;
+			beta;
+			live;
+			</gds:enum>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesPublishingApp">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/publishing_app</gds:sourcenode>
+				<gds:ref>#/definitions/publishing_app_name</gds:ref>
+			<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesPublishingRequestId">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/publishing_request_id</gds:sourcenode>
+				<gds:ref>#/definitions/publishing_request_id</gds:ref>
+			<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesRenderingApp">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/rendering_app</gds:sourcenode>
+				<gds:ref>#/definitions/rendering_app</gds:ref>
+			<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesSchemaName">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/schema_name</gds:sourcenode>
+			<gds:type>string</gds:type>
+				<gds:enum>answer;
+			</gds:enum>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesTitle">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/title</gds:sourcenode>
+				<gds:ref>#/definitions/title</gds:ref>
+			<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesUpdatedAt">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/updated_at</gds:sourcenode>
+			<gds:type>string</gds:type>
+		<gds:format>date-time</gds:format>
+		<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesWithdrawnNotice">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/withdrawn_notice</gds:sourcenode>
+				<gds:ref>#/definitions/withdrawn_notice</gds:ref>
+			<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsDescription">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/description</gds:sourcenode>
+			<gds:type>string</gds:type>
+				<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsAbsolutePath">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/absolute_path</gds:sourcenode>
+	<gds:description>A path only. Query string and/or fragment are not allowed.</gds:description>
+	<gds:pattern>^/(([a-zA-Z0-9._~!$&amp;'()*+,;=@-]|%[0-9a-fA-F]{2})+(/([a-zA-Z0-9._~!$&amp;'()*+,;=@-]|%[0-9a-fA-F]{2})*)*)?$ [Note: colons removed to fix Protege bug]</gds:pattern>
+	<gds:type>string</gds:type>
+				<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsFirstPublishedAt">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/first_published_at</gds:sourcenode>
+	<gds:description>The date the content was first published.  Automatically determined by the publishing-api, unless overridden by the publishing application.</gds:description>
+		<gds:type>string</gds:type>
+		<gds:format>date-time</gds:format>
+		<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsGuid">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/guid</gds:sourcenode>
+		<gds:pattern>^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$</gds:pattern>
+	<gds:type>string</gds:type>
+				<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsLocale">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/locale</gds:sourcenode>
+			<gds:type>string</gds:type>
+				<gds:enum>ar;
+			az;
+			be;
+			bg;
+			bn;
+			cs;
+			cy;
+			da;
+			de;
+			dr;
+			el;
+			en;
+			es;
+			es-419;
+			et;
+			fa;
+			fi;
+			fr;
+			gd;
+			gu;
+			he;
+			hi;
+			hr;
+			hu;
+			hy;
+			id;
+			is;
+			it;
+			ja;
+			ka;
+			kk;
+			ko;
+			lt;
+			lv;
+			ms;
+			mt;
+			ne;
+			nl;
+			no;
+			pa;
+			pa-pk;
+			pl;
+			ps;
+			pt;
+			ro;
+			ru;
+			si;
+			sk;
+			sl;
+			so;
+			sq;
+			sr;
+			sv;
+			sw;
+			ta;
+			th;
+			tk;
+			tr;
+			uk;
+			ur;
+			uz;
+			vi;
+			yi;
+			zh;
+			zh-hk;
+			zh-tw;
+			</gds:enum>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsPublicUpdatedAt">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/public_updated_at</gds:sourcenode>
+	<gds:description>When the content was last significantly changed (a major update). Shown to users.  Automatically determined by the publishing-api, unless overridden by the publishing application.</gds:description>
+		<gds:type>string</gds:type>
+		<gds:format>date-time</gds:format>
+		<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsPublishingAppName">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/publishing_app_name</gds:sourcenode>
+	<gds:description>The application that published this item.</gds:description>
+		<gds:type>string</gds:type>
+				<gds:enum>account-api;
+			calculators;
+			calendars;
+			collections-publisher;
+			contacts;
+			content-publisher;
+			content-tagger;
+			email-alert-frontend;
+			external-link-tracker;
+			feedback;
+			frontend;
+			government-frontend;
+			hmrc-manuals-api;
+			info-frontend;
+			licencefinder;
+			local-links-manager;
+			manuals-publisher;
+			maslow;
+			performanceplatform-big-screen-view;
+			publisher;
+			rummager;
+			search-admin;
+			search-api;
+			service-manual-publisher;
+			share-sale-publisher;
+			short-url-manager;
+			smartanswers;
+			special-route-publisher;
+			specialist-publisher;
+			static;
+			tariff;
+			travel-advice-publisher;
+			whitehall;
+			</gds:enum>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsPublishingScheduledAt">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/publishing_scheduled_at</gds:sourcenode>
+	<gds:description>When this content was last scheduled for publishing. Determined by the publishing intent sent by the publishing API.</gds:description>
+		<gds:type>string</gds:type>
+		<gds:format>date-time</gds:format>
+		<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsRenderingApp">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/rendering_app</gds:sourcenode>
+	<gds:description>The application that renders this item.</gds:description>
+		<gds:type>string</gds:type>
+				<gds:enum>account-api;
+			calculators;
+			calendars;
+			collections;
+			content-store;
+			email-alert-frontend;
+			email-campaign-frontend;
+			feedback;
+			finder-frontend;
+			frontend;
+			government-frontend;
+			info-frontend;
+			licencefinder;
+			performanceplatform-big-screen-view;
+			rummager;
+			search-api;
+			service-manual-frontend;
+			smartanswers;
+			spotlight;
+			static;
+			tariff;
+			whitehall-admin;
+			whitehall-frontend;
+			</gds:enum>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsTitle">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/title</gds:sourcenode>
+			<gds:type>string</gds:type>
+				<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesFirstPublishedAt">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/first_published_at</gds:sourcenode>
+<gds:anyof>ref=#/definitions/first_published_at;
+			type=null;
+			</gds:anyof>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesPublicUpdatedAt">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/public_updated_at</gds:sourcenode>
+<gds:anyof>ref=#/definitions/public_updated_at;
+			type=null;
+			</gds:anyof>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesPublishingScheduledAt">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/publishing_scheduled_at</gds:sourcenode>
+<gds:anyof>ref=#/definitions/publishing_scheduled_at;
+			type=null;
+			</gds:anyof>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesScheduledPublishingDelaySeconds">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/properties/scheduled_publishing_delay_seconds</gds:sourcenode>
+<gds:anyof>ref=#/definitions/scheduled_publishing_delay_seconds;
+			type=null;
+			</gds:anyof>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsAnalyticsIdentifier">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/analytics_identifier</gds:sourcenode>
+<gds:anyof>type=string;
+			type=null;
+			</gds:anyof>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsBodyHtmlAndGovspeak">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/body_html_and_govspeak</gds:sourcenode>
+<gds:anyof>type=string;
+			</gds:anyof>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsDescriptionOptional">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/description_optional</gds:sourcenode>
+<gds:anyof>ref=#/definitions/description;
+			type=null;
+			</gds:anyof>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsPublishingRequestId">
+	<dc:creator>Marc Stephenson via script</dc:creator>
+	<gds:sourcenode>json/definitions/publishing_request_id</gds:sourcenode>
+<gds:oneof>type=string;
+			type=null;
+			</gds:oneof>
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesAnalyticsIdentifier">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsAnalyticsIdentifier"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesBasePath">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsAbsolutePath"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesContentId">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsGuid"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesDescription">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsDescriptionOptional"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesDetails">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsDetails"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesDocumentType">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsStringanswer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesLocale">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsLocale"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesPhase">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsPhasesstringalphabetalive"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesPublishingApp">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsPublishingAppName"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesPublishingRequestId">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsPublishingRequestId"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesRenderingApp">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsRenderingApp"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesSchemaName">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsStringanswer"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesTitle">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsTitle"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesUpdatedAt">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsStringdate-time"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentType/Answer#PropertiesWithdrawnNotice">
+<rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentType/Answer#DefinitionsWithdrawnNotice"/>
+</owl:Class>
+
+</rdf:RDF>

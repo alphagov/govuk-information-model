@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.gov.uk/IA/Ontology/ContentBlockTax#"
+     xml:base="http://www.gov.uk/IA/Ontology/ContentBlockTax"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:gds="http://www.gov.uk/IA/gds:"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:Ontologygds="http://www.gov.uk/IA/Ontologygds:">
+    <owl:Ontology rdf:about="http://www.gov.uk/IA/Ontology/ContentBlockTax">
+        <owl:versionIRI rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/DataProperties"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#ContentBlock -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#ContentBlock">
+        <rdfs:label xml:lang="en-gb">Content Block</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology/ContentBlockTax#Abbreviation -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentBlockTax#Abbreviation">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax#Tax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasChild"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax#Abbreviation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Abbreviation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology/ContentBlockTax#Description -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentBlockTax#Description">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax#Tax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">165</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology/ContentBlockTax#Instructions_to_publishers -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentBlockTax#Instructions_to_publishers">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax#Tax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasChild"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax#Instructions_to_publishers"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Instructions to publishers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology/ContentBlockTax#LeadOrganisation -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentBlockTax#LeadOrganisation">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax#Tax"/>
+        <rdfs:label xml:lang="en-gb">Lead Organisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology/ContentBlockTax#Note -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentBlockTax#Note">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax#Tax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasChild"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax#Note"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">165</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Note</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology/ContentBlockTax#Synonym -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentBlockTax#Synonym">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax#Tax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasChild"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax#Synonym"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Synonym</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology/ContentBlockTax#Tax -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentBlockTax#Tax">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentBlock"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:16:57Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Tax Content Block</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology/ContentBlockTax#Tax_Name -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/ContentBlockTax#Tax_Name">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax#Tax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">165</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Tax Name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment xml:lang="en-gb">This ontology is used to define the Tax Content Block as defined in the Content Block Manager.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
