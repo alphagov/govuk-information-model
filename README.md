@@ -15,12 +15,12 @@ The OWL ontology files are accessed using the public domain ontology editor [Pro
 | File | Description |
 |:------|:-----|
 |`GOVUKOntology.rdf`| The root ontology (information model). The separate ontology files that comprise the overall ontology are imported into this file. |
-|`Properties.rdf`| All standard data properties, object properties, annotation properties, and datatypes. This ontology is imported into all ontology files. |
+|`Core.rdf`| All standard classes, data properties, object properties, annotation properties, and datatypes. This ontology is imported into all ontology files. |
 |`Domain/Domain*.rdf`|The list of separate domain ontologies, one ontology file per domain. Each domain ontology file is included in the root ontology file. The `DomainTemplate.rdf` file should be copied for new domains - see the [guide](https://gov-uk.atlassian.net/wiki/spaces/GIA/pages/edit-v2/5566988289) on how to do this.|
 |`Taxonomy/Taxonomy*.rdf`|The list of separate taxonomy ontologies, one ontology file per taxonomy. Each taxonomy ontology file is included in the root ontology file. The `TaxonomyTemplate.rdf` file should be copied for new taxonomy - see the [guide](https://gov-uk.atlassian.net/wiki/spaces/GIA/pages/edit-v2/5566988289) on how to do this.|
 |`ContentSchema/ContentSchema*.rdf`|The list of separate content schemas ontolgies, one ontology file per content schemas. Each content schemas ontology file is included in the root ontology file. The `ContentSchemaTemplate.rdf` file should be copied for new content schemas - see the [guide](https://gov-uk.atlassian.net/wiki/spaces/GIA/pages/edit-v2/5566988289) on how to do this.|
 | `SHACL/*.ttl`|A folder of [SHACL](https://www.w3.org/TR/shacl/) validation files.|
-|`XSLT/*.xslt`|A folder of [XSLT](https://en.wikipedia.org/wiki/XSLT) files used for detailed validation and information mode exports.|
+|`XSLT/*.xslt`|A folder of [XSLT](https://en.wikipedia.org/wiki/XSLT) files used for detailed validation and information model exports.|
 | `ProtegeViewLayouts/*.xml`| Optional view layouts for the Protégé user interface. One file per view. |
 
 ## Related GitHub Repos ##
