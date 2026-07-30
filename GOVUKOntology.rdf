@@ -1,0 +1,1289 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.gov.uk/IA/Ontology#"
+     xml:base="http://www.gov.uk/IA/Ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:gds="http://www.gov.uk/IA/Ontologygds:"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:gds1="http://www.gov.uk/IA/gds:"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.gov.uk/IA/Ontology">
+        <owl:versionIRI rdf:resource="http://www.gov.uk/IA/Ontology"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/ContentBlockTax"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/DataProperties"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/DomainDriving"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/DomainTax"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/DomainVisas"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyLocale"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyRenderingApp"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomySoftware"/>
+        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyTaxType"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#AISafetyInstitute -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#AISafetyInstitute">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#LeadOrganisation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">AI Safety Institute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#AISecurityInstitute -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#AISecurityInstitute">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#LeadOrganisation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">AI Security Institute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#AWENuclearSecurityTechnologies -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#AWENuclearSecurityTechnologies">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#LeadOrganisation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">AWE Nuclear Security Technologies</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Activity -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Activity">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#RateType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#AddEditionNote -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#AddEditionNote">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#HistoryAndNotesTab"/>
+        <rdfs:label xml:lang="en-gb">Add Edition Note</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#AddRelatedExternalLink -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#AddRelatedExternalLink">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#RelatedExternalLinksTab"/>
+        <rdfs:label xml:lang="en-gb">Add Related External Link</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#AdminTab -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#AdminTab">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Answer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Tab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Admin Tab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Answer -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Answer">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentType"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:15:19Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Answer</rdfs:label>
+        <owl:versionInfo>Extracted from JSON schema at https://github.com/alphagov/publishing-api/tree/main/content_schemas/dist/formats</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Asset -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Asset">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#RateType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#AssignedTo -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#AssignedTo">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#EditTab"/>
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Taxonomy"/>
+        <rdfs:label xml:lang="en-gb">Assigned To</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Authoring -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Authoring">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#SoftwareType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Band -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Band">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Rate"/>
+        <rdfs:label xml:lang="en-gb">Band</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#BandName -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#BandName">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Band"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Band Name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#BasicStatePensionContentBlock -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#BasicStatePensionContentBlock">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#PensionContentBlock"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-08T16:21:44Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Basic State Pension Content Block</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Body -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Body">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#EditTab"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Body</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Breadcrumb -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Breadcrumb">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#TaggingTab"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Breadcrumb</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#CheckForBrokenLinks -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#CheckForBrokenLinks">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#EditTab"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Button"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Check for broken links</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#CollapseAllNodes -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#CollapseAllNodes">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#HistoryAndNotesTab"/>
+        <rdfs:label xml:lang="en-gb">Collapse All Nodes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Contact -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Contact">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentBlock"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#ContactObject -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#ContactObject">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Contact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#ContentBeta -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#ContentBeta">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#EditTab"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Content beta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#ContentBlock -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#ContentBlock">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentObject"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-08T15:41:55Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Content Block</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#ContentObject -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#ContentObject">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#IAArtifact"/>
+        <rdfs:label xml:lang="en-gb">Content Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#ContentType -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#ContentType">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentObject"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-09T10:17:02Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Content Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Decommissioned -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Decommissioned">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#SoftwareStatus"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-11T12:28:42Z</dc:date>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#DeleteThisEdition -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#DeleteThisEdition">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#AdminTab"/>
+        <rdfs:label xml:lang="en-gb">Delete this edition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Domain -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Domain">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#IAArtifact"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-11T15:39:27Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Domain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#EditTab -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#EditTab">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Answer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Tab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Edit Tab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#English -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#English">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Language"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">English</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#FactCheck -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#FactCheck">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#EditTab"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Button"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Fact check</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Format -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Format">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#HomePage"/>
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Taxonomy"/>
+        <rdfs:label xml:lang="en-gb">Format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Format1 -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Format1">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Format"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Format 1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Format2 -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Format2">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Format"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Format 2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#FormatX -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#FormatX">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Format"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Format X</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Gain -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Gain">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#RateType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Gain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Guidance -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Guidance">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentType"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-09T10:20:30Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Guidance and Regulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#GuidanceObject -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#GuidanceObject">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Guidance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#HistoryAndNotesTab -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#HistoryAndNotesTab">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Answer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Tab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">History and Notes Tab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#HomePage -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#HomePage">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Answer"/>
+        <rdfs:label xml:lang="en-gb">Home Page</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#IAArtifact -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#IAArtifact">
+        <rdfs:label xml:lang="en-gb">IA Artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Income -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Income">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#RateType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Income</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Language -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Language">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#HomePage"/>
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#MetadataTab"/>
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Taxonomy"/>
+        <rdfs:label xml:lang="en-gb">Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#LeadOrganisation -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#LeadOrganisation">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Tax"/>
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Taxonomy"/>
+        <rdfs:label xml:lang="en-gb">Lead Organisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Live -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Live">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#SoftwareStatus"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-11T12:28:23Z</dc:date>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#LowerThreshold -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#LowerThreshold">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Band"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasOccurrences"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.gov.uk/IA/Ontology#LowerThreshold"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasOccurrences"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.gov.uk/IA/Ontology#LowerThreshold"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Lower Threshold</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#LowerThresholdApplies -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#LowerThresholdApplies">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#LowerThreshold"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Lower Threshold Applies</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#LowerThresholdValue -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#LowerThresholdValue">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#LowerThreshold"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Lower Threshold Value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#MainstreamBrowsePages -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#MainstreamBrowsePages">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#TaggingTab"/>
+        <rdfs:label xml:lang="en-gb">Mainstream Browse Pages</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#MetaTagDescription -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#MetaTagDescription">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#EditTab"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Meta tag description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#MetadataTab -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#MetadataTab">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Answer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Tab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Metadata Tab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#NewsStory -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#NewsStory">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentType"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-09T10:20:47Z</dc:date>
+        <rdfs:label xml:lang="en-gb">News and Communications</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#NewsStoryObject -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#NewsStoryObject">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#NewsStory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Organisations -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Organisations">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#TaggingTab"/>
+        <rdfs:label xml:lang="en-gb">Organisations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#PensionContentBlock -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#PensionContentBlock">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentBlock"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-08T16:21:14Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Pension Content Block</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Person1 -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Person1">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#AssignedTo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Person 1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Person2 -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Person2">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#AssignedTo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Person 2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#PersonX -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#PersonX">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#AssignedTo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Person X</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Preview -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Preview">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#EditTab"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Button"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Preview</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Publish -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Publish">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#EditTab"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Button"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Publish</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Publishing -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Publishing">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#SoftwareType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Rate -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Rate">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#TaxPaidOn"/>
+        <rdfs:label xml:lang="en-gb">Rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#RateName -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#RateName">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Rate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Rate Name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#RateType -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#RateType">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#TaxPaidOn"/>
+        <rdfs:label xml:lang="en-gb">Rate Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#RateValue -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#RateValue">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Rate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Rate Value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#RelatedContentItems -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#RelatedContentItems">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#TaggingTab"/>
+        <rdfs:label xml:lang="en-gb">Related Content Items</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#RelatedExternalLinksTab -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#RelatedExternalLinksTab">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Answer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Tab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Related External Links Tab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Rendering -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Rendering">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#SoftwareType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Research -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Research">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentType"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-09T10:21:02Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Research and Statistics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#ResearchObject -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#ResearchObject">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Research"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Save -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Save">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#EditTab"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Button"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Save</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#SaveAndGoItem -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#SaveAndGoItem">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#HomePage"/>
+        <rdfs:label xml:lang="en-gb">Save and Go to item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#SaveLinks -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#SaveLinks">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#RelatedExternalLinksTab"/>
+        <rdfs:label xml:lang="en-gb">Save Links</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#SecondPairOfEyes -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#SecondPairOfEyes">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#EditTab"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Button"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Second pair of eyes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Slug -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Slug">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#HomePage"/>
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#MetadataTab"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Slug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#SoftwareStatus -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#SoftwareStatus">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Taxonomy"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-11T12:28:05Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Software Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#SoftwareType -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#SoftwareType">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Taxonomy"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-09T15:34:44Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Software Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#SpecialistTopicPages -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#SpecialistTopicPages">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#TaggingTab"/>
+        <rdfs:label xml:lang="en-gb">Specialist Topic Pages</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#TaggingTab -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#TaggingTab">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Answer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Tab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Tagging Tab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Tax -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Tax">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentBlock"/>
+        <rdfs:label xml:lang="en-gb">Tax Content Block xxx</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#TaxPaidOn -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#TaxPaidOn">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Tax"/>
+        <rdfs:label xml:lang="en-gb">Tax paid on</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Taxonomy -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Taxonomy">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#IAArtifact"/>
+        <rdfs:label xml:lang="en-gb">Taxonomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#TimePeriod -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#TimePeriod">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#ContentBlock"/>
+        <rdfs:label xml:lang="en-gb">Time Period</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#TimePeriodObject -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#TimePeriodObject">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#TimePeriod"/>
+        <rdfs:label xml:lang="en-gb">Time Period</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Title -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Title">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#EditTab"/>
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#HomePage"/>
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#TaxPaidOn"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Transaction -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Transaction">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#RateType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Transaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Unpublish -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Unpublish">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#UnpublishTab"/>
+        <rdfs:label xml:lang="en-gb">Unpublish</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#UnpublishTab -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#UnpublishTab">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Answer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Tab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Unpublish Tab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#UpdateImportantNote -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#UpdateImportantNote">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#HistoryAndNotesTab"/>
+        <rdfs:label xml:lang="en-gb">Update Important Note</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#UpdateMetadata -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#UpdateMetadata">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#MetadataTab"/>
+        <rdfs:label xml:lang="en-gb">Update Metadata</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#UpdateTags -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#UpdateTags">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#TaggingTab"/>
+        <rdfs:label xml:lang="en-gb">Update Tags</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#UpperThreshold -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#UpperThreshold">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Band"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasOccurrences"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.gov.uk/IA/Ontology#UpperThreshold"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasOccurrences"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.gov.uk/IA/Ontology#UpperThreshold"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Upper Threshold</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#UpperThresholdApplies -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#UpperThresholdApplies">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#UpperThreshold"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Upper Threshold Applies</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#UpperThresholdValue -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#UpperThresholdValue">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#UpperThreshold"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.gov.uk/IA/Ontology#Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Upper Threshold Value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#UserNeeds -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#UserNeeds">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#TaggingTab"/>
+        <rdfs:label xml:lang="en-gb">User Needs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Welsh -->
+
+    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Welsh">
+        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Language"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.gov.uk/IA/Ontology#hasDatatype"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en-gb">Welsh</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#English1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.gov.uk/IA/Ontology#English1">
+        <skos:broader rdf:resource="http://www.gov.uk/IA/Ontology#Language1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#English2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.gov.uk/IA/Ontology#English2">
+        <rdf:type rdf:resource="http://www.gov.uk/IA/Ontology#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Language1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.gov.uk/IA/Ontology#Language1"/>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#MyTaxonomy -->
+
+    <owl:NamedIndividual rdf:about="http://www.gov.uk/IA/Ontology#MyTaxonomy">
+        <rdf:type rdf:resource="http://www.gov.uk/IA/Ontology#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Welsh1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.gov.uk/IA/Ontology#Welsh1">
+        <skos:broader rdf:resource="http://www.gov.uk/IA/Ontology#Language1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gov.uk/IA/Ontology#Welsh2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.gov.uk/IA/Ontology#Welsh2">
+        <rdf:type rdf:resource="http://www.gov.uk/IA/Ontology#Language"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

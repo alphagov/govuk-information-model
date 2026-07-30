@@ -1,0 +1,34 @@
+@prefix :      <http://www.example.org/#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace#> .
+
+########## All rdfs:label values must have a language tag of en-GB or cy (Welsh)
+:LabelMustHaveLangGBOrWelsh
+  a sh:NodeShape ;
+  sh:targetSubjectsOf rdfs:label ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:languageIn ("en-gb" "cy") ;
+    sh:message "Labels must have language en-gb or cy." ;
+  ] .
+
+:NoSomeValuesFromShape
+  a sh:NodeShape ;
+  sh:targetClass owl:Restriction ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Use of owl:someValuesFrom is not allowed. Found value: {$value}" ;
+    sh:select """
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      SELECT $this ?value
+        WHERE {
+          $this owl:someValuesFrom ?value .
+          BIND(STR($this) AS ?iri)
+        }
+        """ ;
+  ] .
+

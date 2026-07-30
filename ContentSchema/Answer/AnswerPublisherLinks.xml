@@ -1,0 +1,98 @@
+<json>
+	<schema>http://json-schema.org/draft-04/schema#</schema>
+	<type>object</type>
+	<additionalProperties>false</additionalProperties>
+	<properties>
+		<bulk_publishing>
+			<type>boolean</type>
+		</bulk_publishing>
+		<links>
+			<type>object</type>
+			<additionalProperties>false</additionalProperties>
+			<properties>
+				<facet_groups>
+					<description>Prototype-stage metadata tagging tree roots for this content item. A content item my belong to many facet groups without having any specific facet_values links.</description>
+					<ref>#/definitions/guid_list</ref>
+				</facet_groups>
+				<facet_values>
+					<description>Prototype-stage metadata tagging values for this content item, a content item can be linked to many facet values from varying facet groups.</description>
+					<ref>#/definitions/guid_list</ref>
+				</facet_values>
+				<finder>
+					<description>Powers links from content back to finders the content is surfaced on</description>
+					<ref>#/definitions/guid_list</ref>
+				</finder>
+				<lead_organisations>
+					<description>DEPRECATED: A subset of organisations that should be emphasised in relation to this content item. All organisations specified here should also be part of the organisations array.</description>
+					<ref>#/definitions/guid_list</ref>
+				</lead_organisations>
+				<mainstream_browse_pages>
+					<description>Powers the /browse section of the site. These are known as sections in some legacy apps.</description>
+					<ref>#/definitions/guid_list</ref>
+				</mainstream_browse_pages>
+				<meets_user_needs>
+					<description>The user needs this piece of content meets.</description>
+					<ref>#/definitions/guid_list</ref>
+				</meets_user_needs>
+				<ordered_related_items>
+					<description>Related items, can be any page on GOV.UK. Mostly used for mainstream content to power the sidebar. Ordering of the links is determined by the editor in Content Tagger.</description>
+					<ref>#/definitions/guid_list</ref>
+				</ordered_related_items>
+				<ordered_related_items_overrides>
+					<description>Related items, can be any page on GOV.UK. Overrides 'more like this' automatically generated links in the beta navigation.</description>
+					<ref>#/definitions/guid_list</ref>
+				</ordered_related_items_overrides>
+				<organisations>
+					<description>All organisations linked to this content item. This should include lead organisations.</description>
+					<ref>#/definitions/guid_list</ref>
+				</organisations>
+				<original_primary_publishing_organisation>
+					<description>The organisation that published the original version of the page. Corresponds to the first of the 'Lead organisations' in Whitehall for the first edition, and is empty for all other publishing applications.</description>
+					<ref>#/definitions/guid_list</ref>
+				</original_primary_publishing_organisation>
+				<parent>
+					<description>The parent content item.</description>
+					<ref>#/definitions/guid_list</ref>
+					<maxItems>1</maxItems>
+				</parent>
+				<policy_areas>
+					<description>A largely deprecated tag currently only used to power email alerts.</description>
+					<ref>#/definitions/guid_list</ref>
+				</policy_areas>
+				<primary_publishing_organisation>
+					<description>The organisation that published the page. Corresponds to the first of the 'Lead organisations' in Whitehall, and is empty for all other publishing applications.</description>
+					<ref>#/definitions/guid_list</ref>
+					<maxItems>1</maxItems>
+				</primary_publishing_organisation>
+				<suggested_ordered_related_items>
+					<description>New A/B test suggestions for related items. Used for displaying related content on most pages, except for step-by-step and fatality notices. Links and their ordering are determined by the machine learning algorithms included in this A/B test.</description>
+					<ref>#/definitions/guid_list</ref>
+				</suggested_ordered_related_items>
+				<taxons>
+					<description>Prototype-stage taxonomy label for this content item</description>
+					<ref>#/definitions/guid_list</ref>
+				</taxons>
+				<topics>
+					<description>Powers the /topic section of the site. These are known as specialist sectors in some legacy apps.</description>
+					<ref>#/definitions/guid_list</ref>
+				</topics>
+			</properties>
+		</links>
+		<previous_version>
+			<type>string</type>
+		</previous_version>
+	</properties>
+	<definitions>
+		<guid>
+			<type>string</type>
+			<pattern>^[a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$</pattern>
+		</guid>
+		<guid_list>
+			<type>array</type>
+			<items>
+				<ref>#/definitions/guid</ref>
+			</items>
+			<uniqueItems>true</uniqueItems>
+		</guid_list>
+	</definitions>
+</json>

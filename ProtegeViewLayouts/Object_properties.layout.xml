@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <VSNode splits="0.375 0.625">
+        <HSNode splits="0.1875">
+            <CNode>
+                <Component label="Object property hierarchy">
+                    <Property id="pluginId" value="org.protege.editor.owl.OWLObjectPropertyTree"/>
+                </Component>
+            </CNode>
+        </HSNode>
+        <HSNode splits="0.4773890784982935 0.5226109215017065">
+            <CNode>
+                <Component label="Annotations">
+                    <Property id="pluginId" value="org.protege.editor.owl.OWLObjectPropertyAnnotations"/>
+                </Component>
+                <Component label="Usage">
+                    <Property id="pluginId" value="org.protege.editor.owl.OWLObjectPropertyUsageView"/>
+                </Component>
+            </CNode>
+            <VSNode splits="0.46218487394957986 0.5378151260504201">
+                <CNode>
+                    <Component label="Characteristics">
+                        <Property id="pluginId" value="org.protege.editor.owl.OWLObjectPropertyCharacteristics"/>
+                    </Component>
+                </CNode>
+                <CNode>
+                    <Component label="Description">
+                        <Property id="pluginId" value="org.protege.editor.owl.OWLObjectPropertyDescription"/>
+                    </Component>
+                </CNode>
+            </VSNode>
+        </HSNode>
+    </VSNode>
+</layout>
