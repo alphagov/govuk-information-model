@@ -1,0 +1,4 @@
+*.rdf linguist-detectable=true
+*.rdf linguist-language=RDF
+*.ttl linguist-detectable=true
+*.ttl linguist-language=TTL
