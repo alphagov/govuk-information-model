@@ -1,0 +1,18 @@
+<!-- ========================================================================== -->	
+<!-- The list of ontology files to process                                                                                                   -->	
+<!-- ========================================================================== -->	
+
+<files>
+    <!-- <file href="GOVUKOntology.rdf"/> -->
+    <file href="Core.rdf"/>
+    <file href="ContentSchema/ContentBlockTax.rdf"/>
+    <file href="Domain/Driving.rdf"/> 	
+    <file href="Domain/Tax.rdf"/>
+    <file href="Domain/Visas.rdf"/>
+    <file href="Taxonomy/Organisation.rdf"/>
+    <file href="Taxonomy/PublishingApp.rdf"/>
+    <file href="Taxonomy/Locale.rdf"/>
+    <file href="Taxonomy/RenderingApp.rdf"/>
+    <file href="Taxonomy/Software.rdf"/>
+    <file href="Taxonomy/TaxType.rdf"/> 
+ </files>
