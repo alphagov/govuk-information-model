@@ -1,0 +1,796 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://gov.uk/ontology/TaxonomyLocale#"
+     xml:base="http://gov.uk/ontology/TaxonomyLocale"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:gds="http://gov.uk/ontology/gds:"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://gov.uk/ontology/TaxonomyLocale">
+        <owl:versionIRI rdf:resource="http://gov.uk/ontology/TaxonomyLocale"/>
+        <owl:imports rdf:resource="http://gov.uk/ontology/Core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gov.uk/ontology#Taxonomy -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology#Taxonomy"/>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ar -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ar">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Az -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Az">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">az</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Be -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Be">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">be</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Bg -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Bg">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">bg</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Bn -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Bn">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">bn</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Cs -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Cs">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">cs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Cy -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Cy">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">cy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Da -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Da">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">da</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#De -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#De">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">de</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Dr -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Dr">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">dr</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#El -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#El">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">el</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#En -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#En">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">en</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Es -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Es">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">es</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Es419 -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Es419">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">es-419</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Et -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Et">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">et</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Fa -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Fa">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">fa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Fi -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Fi">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">fi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Fr -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Fr">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">fr</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Gd -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Gd">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">gd</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Gu -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Gu">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">gu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#He -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#He">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">he</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Hi -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Hi">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">hi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Hr -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Hr">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">hr</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Hu -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Hu">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">hu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Hy -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Hy">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">hy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Id -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Id">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">id</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Is -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Is">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">is</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#It -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#It">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">it</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ja -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ja">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ja</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ka -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ka">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ka</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Kk -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Kk">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">kk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ko -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ko">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ko</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ku -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ku">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ku</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ky -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ky">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ky</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Locale -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Locale">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology#Taxonomy"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:16:57Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Locale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Lt -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Lt">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">lt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Lv -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Lv">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">lv</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ms -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ms">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Mt -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Mt">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">mt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ne -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ne">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ni -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ni">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ni</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#No -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#No">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">no</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Pa -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Pa">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">pa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#PaPk -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#PaPk">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">pa-pk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Pi -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Pi">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">pi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ps -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ps">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ps</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Pt -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Pt">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">pt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ro -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ro">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ru -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ru">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ru</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Sk -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Sk">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Sl -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Sl">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">si</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#So -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#So">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">so</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Sq -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Sq">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">sq</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Sr -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Sr">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">sr</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Sv -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Sv">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">sv</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Sw -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Sw">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">sw</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ta -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ta">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Th -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Th">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">th</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ti -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ti">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ti</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Tk -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Tk">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">tk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Tr -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Tr">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">tr</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Uk -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Uk">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">uk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Ur -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Ur">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">ur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Uz -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Uz">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">uz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Vi -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Vi">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">vi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Yi -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Yi">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">yi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#Zh -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#Zh">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">zh</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#ZhHk -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#ZhHk">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">zh-hk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://gov.uk/ontology/TaxonomyLocale#ZhTw -->
+
+    <owl:Class rdf:about="http://gov.uk/ontology/TaxonomyLocale#ZhTw">
+        <rdfs:subClassOf rdf:resource="http://gov.uk/ontology/TaxonomyLocale#Locale"/>
+        <dc:creator>Marc Stephenson</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:17:46Z</dc:date>
+        <rdfs:label xml:lang="en-gb">zh-tw</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
