@@ -1,0 +1,51 @@
+name: Generate ontology metrics
+
+on:
+  workflow_dispatch:
+  
+permissions:
+  contents: write
+
+jobs:
+  generate-ontology-metrics:
+    runs-on: macos-latest
+      
+    steps:
+        - name: Check out repository
+          uses: actions/checkout@v6
+
+        - name: Install Java
+          uses: actions/setup-java@v5
+          with:
+            distribution: temurin
+            java-version: "21"
+
+        - name: Check Java version
+          run: java -version
+
+        - name: Create output directory
+          shell: cmd
+          run: if not exist Outputs mkdir Outputs
+
+        - name: Run Saxon
+          shell: cmd
+          run: >
+            java -jar "tools\saxon-he-10.9.jar"
+            -s:"OntologyList.xml"
+            -xsl:"XSLT\GenerateOntologyMetrics.xslt"
+            -o:"Outputs\OntologyMetrics.md"
+
+        - name: Show output files
+          shell: cmd
+          run: dir Outputs /s /b
+
+        - name: Commit generated metrics
+          shell: pwsh
+          run: |
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add Outputs/OntologyMetrics.md
+            if (-not (git diff --cached --quiet)) {
+              git commit -m "Generate ontology metrics"
+              git push
+            }
