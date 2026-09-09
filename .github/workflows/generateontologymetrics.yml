@@ -24,23 +24,20 @@ jobs:
           run: java -version
 
         - name: Create output directory
-          shell: cmd
-          run: if not exist Outputs mkdir Outputs
+          run: mkdir -p Outputs
 
         - name: Run Saxon
-          shell: cmd
           run: >
-            java -jar "tools\saxon-he-10.9.jar"
+            java -jar "tools/saxon-he-10.9.jar"
             -s:"OntologyList.xml"
-            -xsl:"XSLT\GenerateOntologyMetrics.xslt"
-            -o:"Outputs\OntologyMetrics.md"
+            -xsl:"XSLT/GenerateOntologyMetrics.xslt"
+            -o:"Outputs/OntologyMetrics.md"
 
         - name: Show output files
-          shell: cmd
           run: dir Outputs /s /b
 
         - name: Commit generated metrics
-          shell: pwsh
+          shell: bash
           run: |
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
