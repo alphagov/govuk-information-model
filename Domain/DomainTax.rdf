@@ -1,41 +1,19 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.gov.uk/IA/Ontology/DomainTax#"
-     xml:base="http://www.gov.uk/IA/Ontology/DomainTax"
+<rdf:RDF xmlns="https://gov.uk/ontology/DomainTax#"
+     xml:base="https://gov.uk/ontology/DomainTax"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:gds="http://www.gov.uk/IA/gds:"
+     xmlns:gds="https://gov.uk/gds:"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:gds1="https://gov.uk/ontology/gds:"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="http://www.gov.uk/IA/Ontology/DomainTax">
-        <owl:versionIRI rdf:resource="http://www.gov.uk/IA/Ontology/DomainTax"/>
-        <owl:imports rdf:resource="http://www.gov.uk/IA/Ontology/DataProperties"/>
+    <owl:Ontology rdf:about="https://gov.uk/ontology/DomainTax">
+        <owl:versionIRI rdf:resource="https://gov.uk/ontology/DomainTax"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/Core"/>
     </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
@@ -50,48 +28,49 @@
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology#Domain -->
+    <!-- https://gov.uk/ontology#Domain -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Domain"/>
+    <owl:Class rdf:about="https://gov.uk/ontology#Domain"/>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/DomainTax#T1 -->
+    <!-- https://gov.uk/ontology/DomainTax#T1 -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/DomainTax#T1">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/DomainTax#Tax"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/DomainTax#T1">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/DomainTax#Tax"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/DomainTax#T2 -->
+    <!-- https://gov.uk/ontology/DomainTax#T2 -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/DomainTax#T2">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/DomainTax#Tax"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/DomainTax#T2">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/DomainTax#Tax"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/DomainTax#T3 -->
+    <!-- https://gov.uk/ontology/DomainTax#T3 -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/DomainTax#T3">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/DomainTax#Tax"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/DomainTax#T3">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/DomainTax#Tax"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/DomainTax#T4 -->
+    <!-- https://gov.uk/ontology/DomainTax#T4 -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/DomainTax#T4">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/DomainTax#Tax"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/DomainTax#T4">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/DomainTax#Tax"/>
+        <rdfs:label xml:lang="en-gb">T4</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/DomainTax#Tax -->
+    <!-- https://gov.uk/ontology/DomainTax#Tax -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/DomainTax#Tax">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Domain"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/DomainTax#Tax">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology#Domain"/>
         <dc:creator>Marc Stephenson</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:16:57Z</dc:date>
         <rdfs:label xml:lang="en-gb">Tax Domain</rdfs:label>

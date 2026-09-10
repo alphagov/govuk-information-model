@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://gov.uk/ontology#"
-     xml:base="http://gov.uk/ontology"
+<rdf:RDF xmlns="https://gov.uk/ontology#"
+     xml:base="https://gov.uk/ontology"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:gds="http://gov.uk/ontologygds:"
+     xmlns:gds="https://gov.uk/ontologygds:"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,19 +10,19 @@
      xmlns:gds1="http://www.gov.uk/IA/gds:"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="http://gov.uk/ontology">
-        <owl:versionIRI rdf:resource="http://gov.uk/ontology"/>
-        <owl:imports rdf:resource="http://gov.uk/ontology/ContentBlockTax"/>
-        <owl:imports rdf:resource="http://gov.uk/ontology/Core"/>
-        <owl:imports rdf:resource="http://gov.uk/ontology/DomainDriving"/>
-        <owl:imports rdf:resource="http://gov.uk/ontology/DomainTax"/>
-        <owl:imports rdf:resource="http://gov.uk/ontology/DomainVisas"/>
-        <owl:imports rdf:resource="http://gov.uk/ontology/TaxonomyLocale"/>
-        <owl:imports rdf:resource="http://gov.uk/ontology/TaxonomyOrganisation"/>
-        <owl:imports rdf:resource="http://gov.uk/ontology/TaxonomyRenderingApp"/>
-        <owl:imports rdf:resource="http://gov.uk/ontology/TaxonomySoftware"/>
-        <owl:imports rdf:resource="http://gov.uk/ontology/TaxonomyTaxType"/>
-        <owl:imports rdf:resource="http://gov.uk/ontology/Taxonomy/PublishingApp"/>
+    <owl:Ontology rdf:about="https://gov.uk/ontology">
+        <owl:versionIRI rdf:resource="https://gov.uk/ontology"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/ContentBlockTax"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/Core"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/DomainDriving"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/DomainTax"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/DomainVisas"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/TaxonomyLocale"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/TaxonomyOrganisation"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/TaxonomyRenderingApp"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/TaxonomySoftware"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/TaxonomyTaxType"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/Taxonomy/PublishingApp"/>
     </owl:Ontology>
 </rdf:RDF>
 
