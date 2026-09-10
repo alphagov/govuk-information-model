@@ -1,38 +1,19 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#"
-     xml:base="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp"
+<rdf:RDF xmlns="https://gov.uk/ontology/TaxonomyPublishingApp#"
+     xml:base="https://gov.uk/ontology/TaxonomyPublishingApp"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:gds="https://gov.uk/gds:"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp">
-        <owl:versionIRI rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp"/>
+     xmlns:gds1="https://gov.uk/ontology/gds:"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp">
+        <owl:versionIRI rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp"/>
+        <owl:imports rdf:resource="https://gov.uk/ontology/Core"/>
     </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
@@ -47,259 +28,260 @@
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology#Taxonomy -->
+    <!-- https://gov.uk/ontology#Taxonomy -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology#Taxonomy"/>
+    <owl:Class rdf:about="https://gov.uk/ontology#Taxonomy"/>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#AccountApi -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#AccountApi -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#AccountApi">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#AccountApi">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Calculators -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#Calculators -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Calculators">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#Calculators">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Calendars -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#Calendars -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Calendars">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#Calendars">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Collections_Publisher -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#CollectionsPublisher -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Collections_Publisher">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#CollectionsPublisher">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Contacts -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#Contacts -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Contacts">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#Contacts">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ContentBlockManager -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#ContentBlockManager -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ContentBlockManager">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#ContentBlockManager">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ContentTagger -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#ContentTagger -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ContentTagger">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#ContentTagger">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
+        <rdfs:label xml:lang="en-gb">Content Tagger</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#EmailAlertFrontend -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#EmailAlertFrontend -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#EmailAlertFrontend">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#EmailAlertFrontend">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ExternalLinkTracker -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#ExternalLinkTracker -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ExternalLinkTracker">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#ExternalLinkTracker">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Feedback -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#Feedback -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Feedback">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#Feedback">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Frontend -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#Frontend -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Frontend">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#Frontend">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#GovernmentFrontend -->
+    <!-- https://gov.uk/ontology/Taxonom/PublishingApp#GovernmentFrontend -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#GovernmentFrontend">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#GovernmentFrontend">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#HMRCManualsApi -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#HMRCManualsApi -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#HMRCManualsApi">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#HMRCManualsApi">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#LocalLinksManager -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#LocalLinksManager -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#LocalLinksManager">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#LocalLinksManager">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Manuals_Publisher -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#ManualsPublisher -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Manuals_Publisher">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#ManualsPublisher">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PerformancePlatformBigScreenView -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#PerformancePlatformBigScreenView -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PerformancePlatformBigScreenView">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#PerformancePlatformBigScreenView">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Publisher -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#Publisher -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Publisher">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#Publisher">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApi -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApi -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApi">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApi">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology#Taxonomy"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology#Taxonomy"/>
         <dc:creator>Marc Stephenson</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-15T10:16:57Z</dc:date>
-        <rdfs:label xml:lang="en-gb">PublishingApp</rdfs:label>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-23T07:51:37Z</dc:date>
+        <rdfs:label xml:lang="en-gb">Publishing App</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Rummager -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#Rummager -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Rummager">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#Rummager">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#SearchAdmin -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#SearchAdmin -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#SearchAdmin">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#SearchAdmin">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#SearchApi -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#SearchApi -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#SearchApi">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#SearchApi">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ServiceManualPublisher -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#ServiceManualPublisher -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ServiceManualPublisher">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#ServiceManualPublisher">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ShareSalePublisher -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#ShareSalePublisher -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ShareSalePublisher">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#ShareSalePublisher">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ShortUrlManager -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#ShortUrlManager -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#ShortUrlManager">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#ShortUrlManager">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#SmartAnswers -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#SmartAnswers -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#SmartAnswers">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#SmartAnswers">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Specialist_Publisher -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#SpecialistPublisher -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Specialist_Publisher">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#SpecialistPublisher">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Static -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#Static -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Static">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#Static">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Tariff -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#Tariff -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Tariff">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#Tariff">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Travel_Advice_Publisher -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#TravelAdvicePublisher -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Travel_Advice_Publisher">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#TravelAdvicePublisher">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Whitehall -->
+    <!-- https://gov.uk/ontology/TaxonomyPublishingApp#Whitehall -->
 
-    <owl:Class rdf:about="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#Whitehall">
-        <rdfs:subClassOf rdf:resource="http://www.gov.uk/IA/Ontology/TaxonomyPublishingApp#PublishingApp"/>
+    <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyPublishingApp#Whitehall">
+        <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp"/>
     </owl:Class>
 </rdf:RDF>
 

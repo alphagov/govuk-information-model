@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://gov.uk/ontology#"
-     xml:base="http://gov.uk/ontology"
+<rdf:RDF xmlns="https://gov.uk/ontology#"
+     xml:base="https://gov.uk/ontology"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:gds="http://gov.uk/gds:"
+     xmlns:gds="https://gov.uk/gds:"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="http://gov.uk/ontology/Core">
-        <owl:versionIRI rdf:resource="http://gov.uk/ontology/Core"/>
+    <owl:Ontology rdf:about="https://gov.uk/ontology/Core">
+        <owl:versionIRI rdf:resource="https://gov.uk/ontology/Core"/>
     </owl:Ontology>
     
 
@@ -38,9 +38,9 @@
     
 
 
-    <!-- http://gov.uk/ontology/gds:application -->
+    <!-- https://gov.uk/ontology/gds:application -->
 
-    <owl:AnnotationProperty rdf:about="http://gov.uk/ontology/gds:application">
+    <owl:AnnotationProperty rdf:about="https://gov.uk/ontology/gds:application">
         <dc:creator>Marc Stephenson</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-23T07:51:37Z</dc:date>
     </owl:AnnotationProperty>
@@ -82,23 +82,23 @@
     
 
 
-    <!-- http://gov.uk/ontology#Button -->
+    <!-- https://gov.uk/ontology#Button -->
 
-    <rdfs:Datatype rdf:about="http://gov.uk/ontology#Button">
+    <rdfs:Datatype rdf:about="https://gov.uk/ontology#Button">
         <rdfs:label xml:lang="en-gb">Button</rdfs:label>
     </rdfs:Datatype>
     
 
 
-    <!-- http://gov.uk/ontology#Tab -->
+    <!-- https://gov.uk/ontology#Tab -->
 
-    <rdfs:Datatype rdf:about="http://gov.uk/ontology#Tab"/>
+    <rdfs:Datatype rdf:about="https://gov.uk/ontology#Tab"/>
     
 
 
-    <!-- http://gov.uk/ontology#Value -->
+    <!-- https://gov.uk/ontology#Value -->
 
-    <rdfs:Datatype rdf:about="http://gov.uk/ontology#Value"/>
+    <rdfs:Datatype rdf:about="https://gov.uk/ontology#Value"/>
     
 
 
@@ -113,23 +113,23 @@
     
 
 
-    <!-- http://gov.uk/ontology#hasChild -->
+    <!-- https://gov.uk/ontology#hasChild -->
 
-    <owl:ObjectProperty rdf:about="http://gov.uk/ontology#hasChild">
+    <owl:ObjectProperty rdf:about="https://gov.uk/ontology#hasChild">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://gov.uk/ontology#hasOccurrences -->
+    <!-- https://gov.uk/ontology#hasOccurrences -->
 
-    <owl:ObjectProperty rdf:about="http://gov.uk/ontology#hasOccurrences"/>
+    <owl:ObjectProperty rdf:about="https://gov.uk/ontology#hasOccurrences"/>
     
 
 
-    <!-- http://gov.uk/ontology#hasSoftwareType -->
+    <!-- https://gov.uk/ontology#hasSoftwareType -->
 
-    <owl:ObjectProperty rdf:about="http://gov.uk/ontology#hasSoftwareType">
+    <owl:ObjectProperty rdf:about="https://gov.uk/ontology#hasSoftwareType">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <dc:creator>Marc Stephenson</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-23T07:51:37Z</dc:date>
@@ -137,23 +137,23 @@
     
 
 
-    <!-- http://gov.uk/ontology#hasSynonym -->
+    <!-- https://gov.uk/ontology#hasSynonym -->
 
-    <owl:ObjectProperty rdf:about="http://gov.uk/ontology#hasSynonym">
-        <owl:inverseOf rdf:resource="http://gov.uk/ontology#isSynonymOf"/>
+    <owl:ObjectProperty rdf:about="https://gov.uk/ontology#hasSynonym">
+        <owl:inverseOf rdf:resource="https://gov.uk/ontology#isSynonymOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://gov.uk/ontology#isSynonymOf -->
+    <!-- https://gov.uk/ontology#isSynonymOf -->
 
-    <owl:ObjectProperty rdf:about="http://gov.uk/ontology#isSynonymOf"/>
+    <owl:ObjectProperty rdf:about="https://gov.uk/ontology#isSynonymOf"/>
     
 
 
-    <!-- http://gov.uk/ontology#managedByApplication -->
+    <!-- https://gov.uk/ontology#managedByApplication -->
 
-    <owl:ObjectProperty rdf:about="http://gov.uk/ontology#managedByApplication">
+    <owl:ObjectProperty rdf:about="https://gov.uk/ontology#managedByApplication">
         <dc:creator>Marc Stephenson</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-23T07:51:37Z</dc:date>
         <rdfs:comment>The application used to manage this thing.</rdfs:comment>
@@ -172,9 +172,9 @@
     
 
 
-    <!-- http://gov.uk/ontology#hasDatatype -->
+    <!-- https://gov.uk/ontology#hasDatatype -->
 
-    <owl:DatatypeProperty rdf:about="http://gov.uk/ontology#hasDatatype"/>
+    <owl:DatatypeProperty rdf:about="https://gov.uk/ontology#hasDatatype"/>
     
 
 

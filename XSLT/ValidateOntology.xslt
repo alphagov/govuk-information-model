@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- ************************************************************************************************************************ -->	
-<!-- This script is used to validate the details in an ontology (.rdf file)                                                           -->	
-<!-- ************************************************************************************************************************ -->	
+<!-- ========================================================================== -->	
+<!-- This script is used to validate the details of all ontology.rdf files in a source list                                     -->	
+<!-- ========================================================================== -->	
 
 <xsl:stylesheet version="2.0" 
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
@@ -13,62 +13,88 @@
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:f="urn:functions">
+  
+	<!-- ========================================================================== -->	
+	<xsl:template name="check-missing-en-gb">
+		<xsl:variable name="errors"  select="//*[@xml:lang and not(contains(@xml:lang, 'en-gb'))]"/>
+		<result>
+			<count>
+				<xsl:value-of select="count($errors)"/>
+			</count>
+			<messages>
+				<xsl:for-each select="$errors">
+					<xsl:text>❌ Missing en-gb: **</xsl:text><xsl:value-of select="."/><xsl:text>**</xsl:text>
+				</xsl:for-each>
+			</messages>
+		</result>
+	</xsl:template>
 
-	<!-- ************************************************************************************************************************ -->	
-		<xsl:function name="f:header" as="xs:string">
-		<xsl:param name="s" as="xs:string"/>
-		<xsl:sequence select="concat($s,'&#xa;')"/> 
-	</xsl:function>
+	<!-- ========================================================================== -->	
+	<xsl:template name="check-pascal-case">
+		<xsl:variable name="errors" select="//owl:Class[not(matches(substring-after(@rdf:about, '#'),'^[A-Z][a-zA-Z0-9]*$'))]"/>
+		<result>
+			<count>
+				<xsl:value-of select="count($errors)"/>
+			</count>
+			<messages>
+				<xsl:for-each select="$errors">
+					<xsl:text>❌ Not Pascal Case: **</xsl:text><xsl:value-of select="substring-after(@rdf:about, '#')"/><xsl:text>**</xsl:text>
+				</xsl:for-each>
+			</messages>
+		</result>
+	</xsl:template>   
 
-	<!-- ************************************************************************************************************************ -->	
+	<!-- ========================================================================== -->	
+	<xsl:template name="check-IRI">
+		<xsl:variable name="errors1" select="//@*[contains(., 'https://gov.uk') and not(contains(., 'https://gov.uk/ontology'))]"/>
+		<xsl:variable name="errors2" select="//@*[contains(., '://www.gov.uk')]"/>
+		<xsl:variable name="errors3" select="//@*[contains(., 'http://gov.uk')]"/>
+		<xsl:variable name="errors4" select="//@rdf:about[starts-with(., 'https://gov.uk/') and (string-length(.) - string-length(replace(., '/', '')) > 4)] | //@rdf:resource[starts-with(., 'https://gov.uk/') and (string-length(.) - string-length(replace(., '/', '')) > 4)]"/>
+		<result>
+			<count>
+				<xsl:value-of select="count($errors1) + count($errors2) + count($errors3) + count($errors4)"/>
+			</count>
+			<messages>
+				<xsl:for-each select="$errors1">
+					<xsl:text>❌ Incorrect IRI: **</xsl:text><xsl:value-of select="."/><xsl:text>**</xsl:text>
+				</xsl:for-each>
+				<xsl:for-each select="$errors2">
+					<xsl:text>❌ Incorrect IRI: **</xsl:text><xsl:value-of select="."/><xsl:text>**</xsl:text>
+				</xsl:for-each>
+				<xsl:for-each select="$errors3">
+					<xsl:text>❌ Incorrect IRI: **</xsl:text><xsl:value-of select="."/><xsl:text>**</xsl:text>
+				</xsl:for-each>
+				<xsl:for-each select="$errors4">
+					<xsl:text>❌ Incorrect IRI: **</xsl:text><xsl:value-of select="."/><xsl:text>**</xsl:text>
+				</xsl:for-each>
+			</messages>
+		</result>
+	</xsl:template>	
+   
+	<!-- ========================================================================== -->	
+	<xsl:output method="text" encoding="UTF-8"/>
 	<xsl:template match="/">
-		<xsl:result-document href="Validate.txt" method="text">
-	
-			<!-- ======================================================================= -->	
-			<xsl:text>MISSING LANG ATTRUBUTE&#xa;</xsl:text>
-			<xsl:variable name="query" select="'//rdfs:label[not(@xml:lang)]'"/>
-	
-			<!-- ======================================================================= -->	
-			<xsl:value-of select="f:header('MISSING EN-GB or CY')"/>
-			<xsl:text></xsl:text><xsl:value-of select="count(//rdfs:label[not(@xml:lang='en-gb') and not(@xml:lang='cy')])"/><xsl:text> occurences</xsl:text>
-			<xsl:for-each select="//rdfs:label[not(@xml:lang='en-gb') and not(@xml:lang='cy')]">
-				<xsl:text>&#xa;</xsl:text>
-				<xsl:value-of select="."/>
+		<xsl:result-document href="Validate.md" method="text" encoding="UTF-8">
+		<xsl:text># GOV.UK Ontology Validation</xsl:text><xsl:text>&#10;</xsl:text>
+		<xsl:text>Validated at </xsl:text><xsl:value-of select="format-dateTime(current-dateTime(),'[H01]:[m01]:[s01], [D01] [MNn] [Y0001]')"/><xsl:text> [UTC]&#10;&#10;</xsl:text>
+			<xsl:for-each select="//file">
+				<xsl:variable name="filename" select="resolve-uri(@href, base-uri(.))"/>
+				<xsl:variable name="document" select="document($filename)"/>
+				<xsl:text>Validating: </xsl:text><xsl:value-of select="@href"/>
+				<xsl:for-each select="$document">
+					<!-- Validation steps =========================================================== -->
+					<xsl:variable name="result"><xsl:call-template name="check-missing-en-gb"/></xsl:variable>
+					<xsl:text> (errors: </xsl:text><xsl:value-of select="$result/result/count"/><xsl:value-of select="$result/result/messages"/><xsl:text>) </xsl:text>
+					
+					<xsl:variable name="result"><xsl:call-template name="check-pascal-case"/></xsl:variable><xsl:text></xsl:text>
+					<xsl:text> (errors: </xsl:text><xsl:value-of select="$result/result/count"/><xsl:value-of select="$result/result/messages"/><xsl:text>) </xsl:text>
+					
+					<xsl:variable name="result"><xsl:call-template name="check-IRI"/></xsl:variable>
+					<xsl:text> (errors: </xsl:text><xsl:value-of select="$result/result/count"/><xsl:value-of select="$result/result/messages"/><xsl:text>)  </xsl:text>
+				<!-- ======================================================================= -->
+				<xsl:text>&#10;</xsl:text>
+				</xsl:for-each>
 			</xsl:for-each>
-			<xsl:text>bb&#xa;</xsl:text>
-
-			<!-- ======================================================================= -->	
-			<xsl:text>INCORRECT SOMEVALUESFROM&#xa;</xsl:text>
-			<xsl:for-each select="//owl:someValuesFrom/../../../@rdf:about">
-				<xsl:value-of select="."/>
-				<xsl:text>&#xa;</xsl:text>
-			</xsl:for-each>
-		
-			<!-- ======================================================================= -->	
-			<xsl:text>MISSING DATATYPE&#xa;</xsl:text>
-			<xsl:for-each select="//owl:Class[@rdf:about]">
-				<xsl:variable name="about" select="@rdf:about"/>
-				<xsl:if test="not(.//*[contains(@rdf:resource,'#hasDatatype')]) and (count(//*[@rdf:about=$about]))&lt;2 and (count(//*[@rdf:resource=$about])&lt;2)">
-					<xsl:value-of select="@rdf:about"/>																																																										
-					<xsl:text>=</xsl:text>
-					<xsl:value-of select="count(//*[@rdf:about=$about])"/>
-					<xsl:text>-</xsl:text>
-					<xsl:value-of select="count(.//*[contains(@rdf:resource,'#hasDatatype')])"/>
-					<xsl:text>-</xsl:text>
-					<xsl:value-of select="count(//*[@rdf:resource=$about])"/>
-					<xsl:text>&#xa;</xsl:text>
-				</xsl:if>
-			</xsl:for-each>				
-		
-			<!-- ======================================================================= -->	
-			<xsl:text>&#xa;>>> NOT PASCAL CASE&#xa;</xsl:text>
-			<xsl:for-each select="//owl:Class">
-				<xsl:if test="not(matches(substring-after(./@rdf:about,'#'), '^[A-Z]+[a-z0-9]+(?:[A-Z][a-z0-9]+)*$'))">
-					<xsl:value-of select="substring-after(./@rdf:about,'#')"/>
-					<xsl:text>&#xa;</xsl:text>
-				</xsl:if>
-			</xsl:for-each>		
-
 		</xsl:result-document>
 	</xsl:template>
 </xsl:stylesheet>
