@@ -1,4 +1,4 @@
-*.rdf linguist-detectable=true
-*.rdf linguist-language=RDF
-*.ttl linguist-detectable=true
-*.ttl linguist-language=TTL
+*.xslt linguist-language=XSLT linguist-detectable
+*.xml  linguist-language=XML linguist-detectable
+*.html -linguist-generated
+*.rdf linguist-language=XML linguist-detectable -linguist-generated -linguist-vendored -linguist-documentation
