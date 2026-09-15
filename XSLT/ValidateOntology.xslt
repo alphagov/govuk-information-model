@@ -85,10 +85,8 @@
 					<!-- Validation steps =========================================================== -->
 					<xsl:variable name="result"><xsl:call-template name="check-missing-en-gb"/></xsl:variable>
 					<xsl:text> (errors: </xsl:text><xsl:value-of select="$result/result/count"/><xsl:value-of select="$result/result/messages"/><xsl:text>) </xsl:text>
-					
 					<xsl:variable name="result"><xsl:call-template name="check-pascal-case"/></xsl:variable><xsl:text></xsl:text>
 					<xsl:text> (errors: </xsl:text><xsl:value-of select="$result/result/count"/><xsl:value-of select="$result/result/messages"/><xsl:text>) </xsl:text>
-					
 					<xsl:variable name="result"><xsl:call-template name="check-IRI"/></xsl:variable>
 					<xsl:text> (errors: </xsl:text><xsl:value-of select="$result/result/count"/><xsl:value-of select="$result/result/messages"/><xsl:text>)  </xsl:text>
 				<!-- ======================================================================= -->
