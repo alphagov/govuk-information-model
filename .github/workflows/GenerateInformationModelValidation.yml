@@ -1,0 +1,51 @@
+name: Generate Information Model Validation
+
+on:
+  workflow_dispatch:
+  
+permissions:
+  contents: write
+
+jobs:
+  generate-information-model-validation:
+    runs-on: windows-latest
+      
+    steps:
+        - name: Check out repository
+          uses: actions/checkout@v6
+
+        - name: Install Java
+          uses: actions/setup-java@v5
+          with:
+            distribution: temurin
+            java-version: "21"
+
+        - name: Check Java version
+          run: java -version
+
+        - name: Create output directory
+          shell: cmd
+          run: if not exist Outputs mkdir Outputs
+
+        - name: Run Saxon
+          shell: cmd
+          run: >
+            java -jar "tools\saxon-he-10.9.jar"
+            -xsl:"XSLT\InformationModelValidation.xslt"
+            -it:main
+            -o:"Outputs\InformationModelValidation.md"
+
+        - name: Show output files
+          shell: cmd
+          run: dir Outputs /s /b
+
+        - name: Commit generated validation results
+          shell: pwsh
+          run: |
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add Outputs/InformationModelValidation.md
+            if (-not (git diff --cached --quiet)) {
+              git commit -m "Generate Information Model validation"
+              git push
+            }

@@ -1,0 +1,64 @@
+name: Generate Information Model Diagrams
+
+on:
+  workflow_dispatch:
+  
+permissions:
+  contents: write
+
+jobs:
+  generate-information-model-diagrams:
+    runs-on: windows-latest
+      
+    steps:
+        - name: Check out repository
+          uses: actions/checkout@v6
+
+        - name: Install Java
+          uses: actions/setup-java@v5
+          with:
+            distribution: temurin
+            java-version: "21"
+
+        - name: Check Java version
+          run: java -version
+
+        - name: Install Graphviz
+          shell: pwsh
+          run: |
+            choco install graphviz -y
+            dot -V
+
+        - name: Create output directory
+          shell: cmd
+          run: if not exist Outputs mkdir Outputs
+
+        - name: Run Saxon
+          shell: cmd
+          run: >
+            java -jar "tools\saxon-he-10.9.jar"
+            -xsl:"XSLT\InformationModelDiagrams.xslt"
+            -it:main
+            
+        - name: Convert DOT files to SVG
+          shell: pwsh
+          run: |
+            Get-ChildItem Outputs\*.dot | ForEach-Object {
+              Write-Host "Processing: $($_.Name)"
+              dot -Tsvg $_.FullName -o (Join-Path $_.DirectoryName ($_.BaseName + ".svg"))
+            }
+
+        - name: Show output files
+          shell: cmd
+          run: dir Outputs /s /b
+
+        - name: Commit generated diagrams
+          shell: pwsh
+          run: |
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add Outputs/*.dot Outputs/*.svg
+            if (-not (git diff --cached --quiet)) {
+              git commit -m "Generate Information Model diagrams"
+              git push
+            }
