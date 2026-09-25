@@ -1,0 +1,128 @@
+name: Convert TTL to RDF
+
+on:
+  push:
+    paths:
+      - '*.ttl'
+      - 'Domain/**/*.ttl'
+      - 'Taxonomy/**/*.ttl'
+      - 'ContentSchema/**/*.ttl'
+      - '.github/workflows/ConvertTTLtoRDF.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Download Apache Jena
+        shell: pwsh
+        run: |
+          $JenaVersion = "6.2.0"
+          $JenaArchive = "apache-jena-$JenaVersion.tar.gz"
+          $JenaUrl = "https://dlcdn.apache.org/jena/binaries/$JenaArchive"
+
+          Invoke-WebRequest `
+            -Uri $JenaUrl `
+            -OutFile $JenaArchive
+
+          tar -xzf $JenaArchive
+
+      - name: Set JENA_HOME
+        shell: pwsh
+        run: |
+          $JenaHome = "$PWD\apache-jena-6.2.0"
+          "JENA_HOME=$JenaHome" | Out-File `
+            -FilePath $env:GITHUB_ENV `
+            -Encoding utf8
+
+          $env:JENA_HOME = $JenaHome
+
+          Write-Host "JENA_HOME=$env:JENA_HOME"
+
+      - name: Create RDF directory
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path "RDF" | Out-Null
+
+      - name: Convert TTL files to RDF
+        shell: pwsh
+        run: |
+          $Jena = ".\apache-jena-6.2.0\bat\riot.bat"
+
+          $TtlFolders = @(
+            ".",
+            "Domain",
+            "Taxonomy",
+            "ContentSchema"
+          )
+
+          foreach ($TtlFolder in $TtlFolders) {
+
+            if ($TtlFolder -eq ".") {
+              $Files = Get-ChildItem `
+                -Path "." `
+                -Filter "*.ttl" `
+                -File
+            }
+            else {
+              if (Test-Path $TtlFolder) {
+                $Files = Get-ChildItem `
+                  -Path $TtlFolder `
+                  -Filter "*.ttl" `
+                  -Recurse `
+                  -File
+              }
+              else {
+                Write-Host "Folder not found: $TtlFolder"
+                continue
+              }
+            }
+
+            foreach ($File in $Files) {
+
+              $OutputFileName = `
+                [System.IO.Path]::GetFileNameWithoutExtension($File.Name) + ".rdf"
+
+              $OutputPath = Join-Path "RDF" $OutputFileName
+
+              Write-Host "Converting $($File.FullName) -> $OutputPath"
+
+              & $Jena `
+                --formatted=RDFXML `
+                $File.FullName `
+                > $OutputPath
+
+              if ($LASTEXITCODE -ne 0) {
+                throw "Riot failed to convert $($File.Name)"
+              }
+            }
+          }
+
+      - name: Commit generated RDF
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add RDF/
+
+          if (git diff --cached --quiet) {
+            Write-Host "No RDF changes"
+          }
+          else {
+            git commit -m "Convert TTL files to RDF"
+            git push
+          }
