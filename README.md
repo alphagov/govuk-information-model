@@ -19,7 +19,6 @@ Other supporting files are be stored in this repo. These provide documentation, 
 |`ContentSchema/<ContentSchemaName>.rdf`|The list of separate content schemas ontolgies, one ontology file per content schemas. Each content schemas ontology file is included in the root ontology file. The `ContentSchemaTemplate.rdf` file should be copied for new content schemas.|
 | `SHACL/*.ttl`|A folder of [SHACL](https://www.w3.org/TR/shacl/) validation files.|
 |`XSLT/*.xslt`|A folder of [XSLT](https://en.wikipedia.org/wiki/XSLT) files used for detailed validation and information model exports.|
-| `ProtegeViewLayouts/*.xml`| Optional view layouts for the Protégé user interface. One file per view. |
 
 ## Related GitHub Repos ##
 [Ontology Generation](https://github.com/alphagov/govuk-ai-accelerator/blob/main/docs/architecture/cross-repo-integration.md). 
