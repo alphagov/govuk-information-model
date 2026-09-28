@@ -1,0 +1,50 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns="https://gov.uk/ontology/TaxonomyRenderingApp#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:gds="https://gov.uk/ontology/gds:"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://gov.uk/ontology/TaxonomyRenderingApp">
+    <owl:imports rdf:resource="https://gov.uk/ontology/Core"/>
+    <owl:versionIRI rdf:resource="https://gov.uk/ontology/TaxonomyRenderingApp"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyRenderingApp#RenderingApp">
+    <rdfs:label xml:lang="en-GB">RenderingApp</rdfs:label>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2025-12-15T10:16:57Z</dc:date>
+    <dc:creator>Marc Stephenson</dc:creator>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://gov.uk/ontology#Taxonomy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyRenderingApp#ContentStore">
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyRenderingApp#RenderingApp"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyRenderingApp#FinderFrontend">
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyRenderingApp#RenderingApp"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyRenderingApp#Licensify">
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyRenderingApp#RenderingApp"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyRenderingApp#EmailCampaignFrontend">
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyRenderingApp#RenderingApp"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyRenderingApp#WhitehallAdmin">
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyRenderingApp#RenderingApp"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyRenderingApp#WhitehallFrontend">
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyRenderingApp#RenderingApp"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyRenderingApp#Spotlight">
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyRenderingApp#RenderingApp"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyRenderingApp#InfoFrontend">
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyRenderingApp#RenderingApp"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyRenderingApp#Collections">
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyRenderingApp#RenderingApp"/>
+  </owl:Class>
+</rdf:RDF>

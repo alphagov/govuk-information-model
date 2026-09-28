@@ -1,13 +1,6 @@
 name: Convert TTL to RDF
 
 on:
-  push:
-    paths:
-      - '*.ttl'
-      - 'Domain/**/*.ttl'
-      - 'Taxonomy/**/*.ttl'
-      - 'ContentSchema/**/*.ttl'
-      - '.github/workflows/ConvertTTLtoRDF.yml'
   workflow_dispatch:
 
 permissions:

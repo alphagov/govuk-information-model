@@ -1,0 +1,46 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:gds="https://gov.uk/gds:"
+    xmlns:gds1="https://gov.uk/ontology/gds:"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="https://gov.uk/ontology/DomainVisas#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://gov.uk/ontology/DomainVisas">
+    <owl:imports rdf:resource="https://gov.uk/ontology/Core"/>
+    <owl:versionIRI rdf:resource="https://gov.uk/ontology/DomainVisas"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://gov.uk/ontology/DomainVisas#V3">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://gov.uk/ontology/DomainVisas#Visas"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/DomainVisas#V4">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://gov.uk/ontology/DomainVisas#Visas"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/DomainVisas#V1">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://gov.uk/ontology/DomainVisas#Visas"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/DomainVisas#V2">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://gov.uk/ontology/DomainVisas#Visas"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology#Domain"/>
+  <owl:Class rdf:about="https://gov.uk/ontology/DomainVisas#Visas">
+    <rdfs:label xml:lang="en-GB">Visas Domain</rdfs:label>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2025-12-15T10:16:57Z</dc:date>
+    <dc:creator>Marc Stephenson</dc:creator>
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology#Domain"/>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdfs:comment xml:lang="en-GB">The ontology for the Visa domain. Currently a placeholder ontology.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>
