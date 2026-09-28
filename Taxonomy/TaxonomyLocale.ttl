@@ -1,0 +1,575 @@
+@prefix : <https://gov.uk/ontology/TaxonomyLocale#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gds: <https://gov.uk/ontology/gds:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <https://gov.uk/ontology/TaxonomyLocale#> .
+
+<https://gov.uk/ontology/TaxonomyLocale> rdf:type owl:Ontology ;
+                                          owl:versionIRI <https://gov.uk/ontology/TaxonomyLocale> ;
+                                          owl:imports <https://gov.uk/ontology/Core> .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://gov.uk/ontology#Taxonomy
+<https://gov.uk/ontology#Taxonomy> rdf:type owl:Class .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ar
+:Ar rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ar"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Az
+:Az rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "az"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Be
+:Be rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "be"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Bg
+:Bg rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "bg"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Bn
+:Bn rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "bn"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Cs
+:Cs rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "cs"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Cy
+:Cy rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "cy"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Da
+:Da rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "da"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#De
+:De rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "de"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Dr
+:Dr rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "dr"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#El
+:El rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "el"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#En
+:En rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "en"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Es
+:Es rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "es"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Es419
+:Es419 rdf:type owl:Class ;
+       rdfs:subClassOf :Locale ;
+       dc:creator "Marc Stephenson" ;
+       dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+       rdfs:label "es-419"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Et
+:Et rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "et"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Fa
+:Fa rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "fa"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Fi
+:Fi rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "fi"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Fr
+:Fr rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "fr"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Gd
+:Gd rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "gd"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Gu
+:Gu rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "gu"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#He
+:He rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "he"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Hi
+:Hi rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "hi"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Hr
+:Hr rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "hr"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Hu
+:Hu rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "hu"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Hy
+:Hy rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "hy"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Id
+:Id rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "id"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Is
+:Is rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "is"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#It
+:It rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "it"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ja
+:Ja rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ja"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ka
+:Ka rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ka"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Kk
+:Kk rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "kk"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ko
+:Ko rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ko"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ku
+:Ku rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ku"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ky
+:Ky rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ky"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Locale
+:Locale rdf:type owl:Class ;
+        rdfs:subClassOf <https://gov.uk/ontology#Taxonomy> ;
+        dc:creator "Marc Stephenson" ;
+        dc:date "2025-12-15T10:16:57Z"^^xsd:dateTime ;
+        rdfs:label "Locale"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Lt
+:Lt rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "lt"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Lv
+:Lv rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "lv"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ms
+:Ms rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ms"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Mt
+:Mt rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "mt"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ne
+:Ne rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ne"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ni
+:Ni rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ni"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#No
+:No rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "no"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Pa
+:Pa rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "pa"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#PaPk
+:PaPk rdf:type owl:Class ;
+      rdfs:subClassOf :Locale ;
+      dc:creator "Marc Stephenson" ;
+      dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+      rdfs:label "pa-pk"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Pi
+:Pi rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "pi"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ps
+:Ps rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ps"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Pt
+:Pt rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "pt"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ro
+:Ro rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ro"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ru
+:Ru rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ru"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Sk
+:Sk rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Sl
+:Sl rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "si"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#So
+:So rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "so"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Sq
+:Sq rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "sq"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Sr
+:Sr rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "sr"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Sv
+:Sv rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "sv"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Sw
+:Sw rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "sw"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ta
+:Ta rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ta"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Th
+:Th rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "th"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ti
+:Ti rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ti"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Tk
+:Tk rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "tk"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Tr
+:Tr rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "tr"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Uk
+:Uk rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "uk"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Ur
+:Ur rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "ur"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Uz
+:Uz rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "uz"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Vi
+:Vi rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "vi"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Yi
+:Yi rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "yi"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#Zh
+:Zh rdf:type owl:Class ;
+    rdfs:subClassOf :Locale ;
+    dc:creator "Marc Stephenson" ;
+    dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+    rdfs:label "zh"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#ZhHk
+:ZhHk rdf:type owl:Class ;
+      rdfs:subClassOf :Locale ;
+      dc:creator "Marc Stephenson" ;
+      dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+      rdfs:label "zh-hk"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyLocale#ZhTw
+:ZhTw rdf:type owl:Class ;
+      rdfs:subClassOf :Locale ;
+      dc:creator "Marc Stephenson" ;
+      dc:date "2025-12-15T10:17:46Z"^^xsd:dateTime ;
+      rdfs:label "zh-tw"@en-gb .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,152 @@
+@prefix : <https://gov.uk/ontology/ContentSchemaTax#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gds: <https://gov.uk/gds:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gds1: <https://gov.uk/IA/gds:> .
+@prefix gds2: <https://gov.uk/ontology/gds:> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix Ontologygds: <https://gov.uk/ontologygds:> .
+@base <https://gov.uk/ontology/ContentSchemaTax#> .
+
+<https://gov.uk/ontology/ContentSchemaTax> rdf:type owl:Ontology ;
+                                            owl:versionIRI <https://gov.uk/ontology/ContentSchemaTax> ;
+                                            owl:imports <https://gov.uk/ontology/Core> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#maxQualifiedCardinality
+owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#minQualifiedCardinality
+owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://gov.uk/ontology#ContentSchema
+<https://gov.uk/ontology#ContentSchema> rdf:type owl:Class ;
+                                        rdfs:label "Content Block"@en-gb .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#Abbreviation
+:Abbreviation rdf:type owl:Class ;
+              rdfs:subClassOf :Tax ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://gov.uk/ontology#hasDatatype> ;
+                                owl:allValuesFrom xsd:string
+                              ] ;
+              rdfs:label "Abbreviation"@en-gb .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#Description
+:Description rdf:type owl:Class ;
+             rdfs:subClassOf :Tax ;
+             rdfs:label "Description"@en-gb .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#InstructionToPublishers
+:InstructionToPublishers rdf:type owl:Class ;
+                         rdfs:subClassOf :Tax ;
+                         rdfs:label "Instructions to publishers"@en-gb .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#LeadOrganisation
+:LeadOrganisation rdf:type owl:Class ;
+                  rdfs:subClassOf :Tax ;
+                  rdfs:label "Lead Organisation"@en-gb .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#Note
+:Note rdf:type owl:Class ;
+      rdfs:subClassOf :Tax ;
+      rdfs:label "Note"@en-gb .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#Part1
+:Part1 rdf:type owl:Class ;
+       rdfs:subClassOf :InstructionToPublishers ;
+       owl:disjointWith :Part2 .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#Part2
+:Part2 rdf:type owl:Class ;
+       rdfs:subClassOf :InstructionToPublishers .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#Part3
+:Part3 rdf:type owl:Class ;
+       rdfs:subClassOf :Note .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#Part3a
+:Part3a rdf:type owl:Class ;
+        rdfs:subClassOf :Part3 .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#Synonym
+:Synonym rdf:type owl:Class ;
+         rdfs:subClassOf :Tax ;
+         rdfs:label "Synonym"@en-gb .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#Tax
+:Tax rdf:type owl:Class ;
+     rdfs:subClassOf <https://gov.uk/ontology#ContentSchema> ;
+     dc:creator "Marc Stephenson" ;
+     dc:date "2025-12-15T10:16:57Z"^^xsd:dateTime ;
+     rdfs:label "Tax Content Block"@en-gb .
+
+
+###  https://gov.uk/ontology/ContentSchemaTax#TaxName
+:TaxName rdf:type owl:Class ;
+         rdfs:subClassOf :Tax ;
+         rdfs:label "Tax Name"@en-gb .
+
+
+[ owl:maxQualifiedCardinality "165"^^xsd:nonNegativeInteger
+] .
+
+[ owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "165"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "165"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+owl:Thing rdfs:comment "This ontology is used to define the Tax Content Block as defined in the Content Block Manager."@en-gb .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
