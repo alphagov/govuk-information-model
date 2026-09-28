@@ -1,0 +1,184 @@
+@prefix : <https://gov.uk/ontology/TaxonomyPublishingApp#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gds: <https://gov.uk/gds:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gds1: <https://gov.uk/ontology/gds:> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <https://gov.uk/ontology/TaxonomyPublishingApp#> .
+
+<https://gov.uk/ontology/TaxonomyPublishingApp> rdf:type owl:Ontology ;
+                                                 owl:versionIRI <https://gov.uk/ontology/TaxonomyPublishingApp> ;
+                                                 owl:imports <https://gov.uk/ontology/Core> .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://gov.uk/ontology#Taxonomy
+<https://gov.uk/ontology#Taxonomy> rdf:type owl:Class .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#AccountApi
+:AccountApi rdf:type owl:Class ;
+            rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#Calculators
+:Calculators rdf:type owl:Class ;
+             rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#Calendars
+:Calendars rdf:type owl:Class ;
+           rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#CollectionsPublisher
+:CollectionsPublisher rdf:type owl:Class ;
+                      rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#Contacts
+:Contacts rdf:type owl:Class ;
+          rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#ContentBlockManager
+:ContentBlockManager rdf:type owl:Class ;
+                     rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#ContentTagger
+:ContentTagger rdf:type owl:Class ;
+               rdfs:subClassOf :PublishingApp ;
+               rdfs:label "Content Tagger"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#EmailAlertFrontend
+:EmailAlertFrontend rdf:type owl:Class ;
+                    rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#ExternalLinkTracker
+:ExternalLinkTracker rdf:type owl:Class ;
+                     rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#Feedback
+:Feedback rdf:type owl:Class ;
+          rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#Frontend
+:Frontend rdf:type owl:Class ;
+          rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#GovernmentFrontend
+:GovernmentFrontend rdf:type owl:Class ;
+                    rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#HMRCManualsApi
+:HMRCManualsApi rdf:type owl:Class ;
+                rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#LocalLinksManager
+:LocalLinksManager rdf:type owl:Class ;
+                   rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#ManualsPublisher
+:ManualsPublisher rdf:type owl:Class ;
+                  rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#PerformancePlatformBigScreenView
+:PerformancePlatformBigScreenView rdf:type owl:Class ;
+                                  rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#Publisher
+:Publisher rdf:type owl:Class ;
+           rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApi
+:PublishingApi rdf:type owl:Class ;
+               rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#PublishingApp
+:PublishingApp rdf:type owl:Class ;
+               rdfs:subClassOf <https://gov.uk/ontology#Taxonomy> ;
+               dc:creator "Marc Stephenson" ;
+               dc:date "2026-07-23T07:51:37Z"^^xsd:dateTime ;
+               rdfs:label "Publishing App"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#Rummager
+:Rummager rdf:type owl:Class ;
+          rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#SearchAdmin
+:SearchAdmin rdf:type owl:Class ;
+             rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#SearchApi
+:SearchApi rdf:type owl:Class ;
+           rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#ServiceManualPublisher
+:ServiceManualPublisher rdf:type owl:Class ;
+                        rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#ShareSalePublisher
+:ShareSalePublisher rdf:type owl:Class ;
+                    rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#ShortUrlManager
+:ShortUrlManager rdf:type owl:Class ;
+                 rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#SmartAnswers
+:SmartAnswers rdf:type owl:Class ;
+              rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#SpecialistPublisher
+:SpecialistPublisher rdf:type owl:Class ;
+                     rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#Static
+:Static rdf:type owl:Class ;
+        rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#Tariff
+:Tariff rdf:type owl:Class ;
+        rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#TravelAdvicePublisher
+:TravelAdvicePublisher rdf:type owl:Class ;
+                       rdfs:subClassOf :PublishingApp .
+
+
+###  https://gov.uk/ontology/TaxonomyPublishingApp#Whitehall
+:Whitehall rdf:type owl:Class ;
+           rdfs:subClassOf :PublishingApp .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
