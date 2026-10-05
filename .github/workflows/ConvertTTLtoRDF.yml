@@ -4,9 +4,9 @@ on:
   push:
     paths:
       - '*.ttl'
-      - 'Domain/**/*.ttl'
-      - 'Taxonomy/**/*.ttl'
-      - 'ContentSchema/**/*.ttl'
+      - 'Domain/**/Domain*.ttl'
+      - 'Taxonomy/**/Taxonomy*.ttl'
+      - 'ContentSchema/**/ContentSchema*.ttl'
       - '.github/workflows/ConvertTTLtoRDF.yml'
   workflow_dispatch:
 
