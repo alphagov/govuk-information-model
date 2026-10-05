@@ -28,101 +28,85 @@ jobs:
           java-version: '21'
 
       - name: Download Apache Jena
-        shell: pwsh
+        shell: bash
         run: |
           $JenaVersion = "6.2.0"
-          $JenaArchive = "apache-jena-$JenaVersion.tar.gz"
-          $JenaUrl = "https://dlcdn.apache.org/jena/binaries/$JenaArchive"
+          $JenaArchive = "apache-jena-${JenaVersion}.tar.gz"
+          $JenaUrl = "https://dlcdn.apache.org/jena/binaries/${JenaArchive}"
 
-          Invoke-WebRequest `
-            -Uri $JenaUrl `
-            -OutFile $JenaArchive
+          curl -L "$JenaUrl" -o "$JenaArchive"
 
-          tar -xzf $JenaArchive
+          tar -xzf "$JenaArchive"
 
       - name: Set JENA_HOME
-        shell: pwsh
+        shell: bash
         run: |
-          $JenaHome = "$PWD\apache-jena-6.2.0"
-          "JENA_HOME=$JenaHome" | Out-File `
-            -FilePath $env:GITHUB_ENV `
-            -Encoding utf8
-
-          $env:JENA_HOME = $JenaHome
-
-          Write-Host "JENA_HOME=$env:JENA_HOME"
+          $JenaHome="$PWD/apache-jena-6.2.0"
+          echo "JENA_HOME=$JenaHome" >> "$GITHUB_ENV"
+          echo "$JenaHome/bin" >> "$GITHUB_PATH"
+          export JENA_HOME="$JenaHome"
+          echo "JENA_HOME=$JENA_HOME"
 
       - name: Create RDF directory
-        shell: pwsh
+        shell: bash
         run: |
-          New-Item -ItemType Directory -Force -Path "RDF" | Out-Null
+          mkdir -p RDF
 
       - name: Convert TTL files to RDF
-        shell: pwsh
+        shell: bash
         run: |
-          $Jena = ".\apache-jena-6.2.0\bat\riot.bat"
+          $Jena = "./apache-jena-6.2.0/boin/riot.bat"
 
-          $TtlFolders = @(
-            ".",
-            "Domain",
-            "Taxonomy",
+          $TtlFolders = (
+            "."
+            "Domain"
+            "Taxonomy"
             "ContentSchema"
           )
 
-          foreach ($TtlFolder in $TtlFolders) {
+          for TtlFolder in "${TtlFolders[@]}"; do
 
-            if ($TtlFolder -eq ".") {
-              $Files = Get-ChildItem `
-                -Path "." `
-                -Filter "*.ttl" `
-                -File
-            }
+            if [[ "$TtlFolder" == "."]]; then
             else {
-              if (Test-Path $TtlFolder) {
-                $Files = Get-ChildItem `
-                  -Path $TtlFolder `
-                  -Filter "*.ttl" `
-                  -Recurse `
-                  -File
+              if [[ -d "$TltFolder" ]]; then
               }
               else {
-                Write-Host "Folder not found: $TtlFolder"
+                echo "Folder not found: $TlFolder"
                 continue
               }
             }
 
-            foreach ($File in $Files) {
+            for File in "${Files[@]}"; do
+              [[ -z "$File" ]] && continue
 
-              $OutputFileName = `
-                [System.IO.Path]::GetFileNameWithoutExtension($File.Name) + ".rdf"
+              FileName="$(basename "$File")"
+              OutputFileName="${FileName%.ttl}.rdf"
+              OutputPath="RDF/$OutputFileName"
 
-              $OutputPath = Join-Path "RDF" $OutputFileName
+              echo "Converting $File -> $OutputPath"
 
-              Write-Host "Converting $($File.FullName) -> $OutputPath"
-
-              & $Jena `
-                --formatted=RDFXML `
-                $File.FullName `
-                > $OutputPath
+              "$Jena" \
+                --formatted=RDFXML \
+                "$File" \
+                > "$OutputPath"
 
               if ($LASTEXITCODE -ne 0) {
                 throw "Riot failed to convert $($File.Name)"
-              }
-            }
+              done
+            done
           }
 
       - name: Commit generated RDF
-        shell: pwsh
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add RDF/
 
-          if (git diff --cached --quiet) {
-            Write-Host "No RDF changes"
-          }
-          else {
+          if git diff --cached --quiet; then
+            echo "No RDF changes"
+            else
             git commit -m "Convert TTL files to RDF"
             git push
           }
