@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   convert:
-    runs-on: windows-latest
+    runs-on: macos-latest
 
     steps:
       - name: Checkout repository
