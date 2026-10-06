@@ -96,8 +96,11 @@ jobs:
           
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
           git checkout -b "$BRANCH"
+          
           git add RDF/
+          
           if git diff --cached --quiet; then
             echo "No RDF changes"
             exit 0
@@ -105,15 +108,14 @@ jobs:
           
           git commit -m "Convert TTL files to RDF"
           git push origin "$BRANCH"
+          
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
           
-          - name: Create pull request
-          if: steps.rdf_branch.outputs.branch != ''
-          env:
-           GH_TOKEN: ${{ github.token }}
-           run: |
+      - name: Create pull request
+        if: steps.rdf_branch.outputs.branch != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          shell: bash
+          run: |
              gh pr create \
-                --base main \
-                --head "${{ steps.rdf_branch.outputs.branch }}" \
-                --title "Generate RDF files" \
-                --body "Automatically generated RDF files from the TTl source files."
+                --base main --head "${{ steps.rdf_branch.outputs.branch }}" --title "Generate RDF files" --body "Automatically generated RDF files from the TTl source files."
