@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   convert:
@@ -95,7 +96,19 @@ jobs:
           git add RDF/
           if git diff --cached --quiet; then
             echo "No RDF changes"
-          else
-            git commit -m "Convert TTL files to RDF"
-            git push
+            exit 0
           fi
+          git commit -m "Convert TTL files to RDF"
+          git push --set-upstream orgin "$BRANCH"
+          
+          - name: Create pull request
+          env:
+           GH_TOKEN: ${{ github.token }}
+           run: |
+             BRANCH="rdf=generation-${GITHUB_RUN_ID}"
+             
+             gh pr create \
+               --base main \
+                --head "$BRANCH" \
+                --title "Generate RDF files" \
+                --body "Automatically generated RDF files from the TTl source files."
