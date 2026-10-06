@@ -98,17 +98,18 @@ jobs:
             echo "No RDF changes"
             exit 0
           fi
+          
           git commit -m "Convert TTL files to RDF"
-          git push --set-upstream orgin "$BRANCH"
+          git push orgin "$BRANCH"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
           
           - name: Create pull request
+          if: steps.rdf_branch.outputs.branch != ''
           env:
            GH_TOKEN: ${{ github.token }}
            run: |
-             BRANCH="rdf=generation-${GITHUB_RUN_ID}"
-             
              gh pr create \
-               --base main \
-                --head "$BRANCH" \
+                --base main \
+                --head "${{ steps.rdf_branch.outputs.branch }}" \
                 --title "Generate RDF files" \
                 --body "Automatically generated RDF files from the TTl source files."
