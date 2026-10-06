@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   convert:
@@ -88,14 +89,36 @@ jobs:
           find RDF -type f -name "*.rdf" -print
 
       - name: Commit generated RDF
+        id: rdf_branch
         shell: bash
         run: |
+          BRANCH="rdf_generation-${GITHUB_RUN_ID}"
+          
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          git checkout -b "$BRANCH"
+          
           git add RDF/
+          
           if git diff --cached --quiet; then
             echo "No RDF changes"
-          else
-            git commit -m "Convert TTL files to RDF"
-            git push
+            exit 0
           fi
+          
+          git commit -m "Convert TTL files to RDF"
+          git push origin "$BRANCH"
+          
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          
+      - name: Create pull request
+        if: steps.rdf_branch.outputs.branch != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh pr create \
+            --base main \
+            --head "${{ steps.rdf_branch.outputs.branch }}" \
+            --title "Generate RDF files" \
+            --body "Automatically generated RDF files from the TTL source files."
