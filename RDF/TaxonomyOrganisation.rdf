@@ -1,0 +1,63 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:gds1="https://gov.uk/ontology/gds:"
+    xmlns:gds="https://gov.uk/IA/gds:"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns="https://gov.uk/ontology/TaxonomyOrganisation#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://gov.uk/ontology/TaxonomyOrganisation">
+    <owl:imports rdf:resource="https://gov.uk/ontology/Core"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyOrganisation#AISecurityInstitute">
+    <rdfs:label xml:lang="en-GB">AI Security Institute</rdfs:label>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2026-07-23T07:51:37Z</dc:date>
+    <dc:creator>Marc Stephenson</dc:creator>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty rdf:resource="https://gov.uk/ontology#hasDatatype"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyOrganisation#Organisation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology#Taxonomy"/>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyOrganisation#Organisation">
+    <rdfs:label xml:lang="en-GB">Organisation</rdfs:label>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2026-07-23T07:51:37Z</dc:date>
+    <dc:creator>Marc Stephenson</dc:creator>
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology#Taxonomy"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyOrganisation#AWENuclearSecurityTechnologies">
+    <rdfs:label xml:lang="en-GB">AWE Nuclear Security Technologies</rdfs:label>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2026-07-23T07:51:37Z</dc:date>
+    <dc:creator>Marc Stephenson</dc:creator>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty rdf:resource="https://gov.uk/ontology#hasDatatype"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyOrganisation#Organisation"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://gov.uk/ontology/TaxonomyOrganisation#AISafetyInstitute">
+    <rdfs:label xml:lang="en-GB">AI Safety Institute</rdfs:label>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2026-07-23T07:51:37Z</dc:date>
+    <dc:creator>Marc Stephenson</dc:creator>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty rdf:resource="https://gov.uk/ontology#hasDatatype"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://gov.uk/ontology/TaxonomyOrganisation#Organisation"/>
+  </owl:Class>
+</rdf:RDF>
