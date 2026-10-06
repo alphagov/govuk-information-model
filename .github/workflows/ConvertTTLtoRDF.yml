@@ -83,6 +83,9 @@ jobs:
               "$Jena" --formatted=RDFXML "$File" > "$OutputPath"
             done < <("${FindCommand[@]}")
           done
+          
+          echo "Generated RDF files:"
+          find RDF -type f -name "*.rdf" -print
 
       - name: Commit generated RDF
         shell: bash
