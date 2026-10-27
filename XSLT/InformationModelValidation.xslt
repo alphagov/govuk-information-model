@@ -99,7 +99,7 @@
 				<xsl:value-of select="if ($result3/result/errorcount1 > 0) then $result3/result/errormessage1 else ''"/>    
 				<xsl:value-of select="if ($result3/result/errorcount2 > 0) then $result3/result/errormessage2 else ''"/>    
 				            
-				<xsl:if test="($result1/result/errorcount+$result2/result/errorcount+$result3/result/errorcount) &lt; 1">0</xsl:if>
+				<xsl:if test="($result1/result/errorcount + $result2/result/errorcount + $result3/result/errorcount1 + $result3/result/errorcount2) &lt; 1">0</xsl:if>
                 <xsl:text>| &#10;</xsl:text>
             </xsl:for-each>
         </xsl:for-each>
