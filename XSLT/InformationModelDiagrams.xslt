@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ===============================================================================================
-    Generates a .dot diagram file for each .rdf file in the RDF Information Model folder.
-	Each .dot file is convereted to .svg for display in Markdown files.
+	Generates visual diagrams of the GOV.UK Information Model from a configurable collection of RDF/XML files. A a .dot diagram file for
+	each .rdf file is generated. Each .dot file can then be converted to .svg for display. The XML files are the result of converting the
+	Information Model's TTL files as edited by IAs.
 
 	Command Line:
-	java -jar "tools/saxon-he-10.9.jar" -xsl:"XSLT/InformationModelDiagrams.xslt" -it:main
+	java -jar "tools/saxon-he-10.9.jar"
+		-xsl:"XSLT/InformationModelDiagrams.xslt" 
+		-it:main
+		rdf-folder="../RDF/"
+		output-folder="../Outputs/"
+
+	Command Line .dot to .svg conversion:
 	Get-ChildItem .\Outputs\*.dot | ForEach-Object {Write-Host "Processing: $($_.Name)"; dot -Tsvg $_.FullName -o (Join-Path $_.DirectoryName ($_.BaseName + ".svg"))}
      ============================================================================================== -->
 
@@ -19,7 +26,8 @@
     xmlns:f="urn:functions"
     exclude-result-prefixes="xs owl rdf rdfs skos f">
 
-    <xsl:param name="rdf-folder" as="xs:string" select="'../RDF'"/>
+    <xsl:param name="rdf-folder" as="xs:string"/>
+	<xsl:param name="output-folder" as="xs:string"/>
     <xsl:output method="text" encoding="UTF-8"/>
     
     <!-- ========================================================= -->
@@ -68,7 +76,7 @@
 <!-- ============================================================================================ -->
     <xsl:template name="outputontology">
 		<xsl:param name="document"/>
-        <xsl:text>     node [shape=box, width=1.7, height=0.3, fixedsize=true, fontname="Arial", fontsize=10, style="rounded,filled", fontcolor=white, margin="0.08,0.04", penwidth=0.3];&#10;</xsl:text>
+        <xsl:text>     node [shape=box, width=2.5, height=0.3, fixedsize=true, fontname="Arial", fontsize=10, style="rounded,filled", fontcolor=white, margin="0.08,0.04", penwidth=0.3];&#10;</xsl:text>
 		<!-- Generate nodes from this RDF file only -->
         <xsl:for-each-group select="$document//owl:Class[@rdf:about]" group-by="string(@rdf:about)">
 			<xsl:sort select="current-grouping-key()"/>            
@@ -100,7 +108,7 @@
 <!-- ============================================================================================ -->
     <xsl:template name="outputtaxonomy">
 		<xsl:param name="document"/>
-        <xsl:text>     node [shape=box, width=3.7, height=0.3, fixedsize=true, fontname="Arial", fontsize=10, style="rounded,filled", fontcolor=white, margin="0.08,0.04", penwidth=0.3];&#10;</xsl:text>
+        <xsl:text>     node [shape=box, width=2.5, height=0.3, fixedsize=true, fontname="Arial", fontsize=10, style="rounded,filled", fontcolor=white, margin="0.08,0.04", penwidth=0.3];&#10;</xsl:text>
 		<!-- SKOS taxonomy: concept scheme, concepts and broader relationships -->
         <xsl:for-each-group select="$document//skos:ConceptScheme[@rdf:about]" group-by="string(@rdf:about)">
 			<xsl:sort select="lower-case(string((current-group()/skos:prefLabel)[1]))"/>
@@ -146,12 +154,12 @@
         <!-- Generate one .dot file for each RDF file -->
         <xsl:for-each select="$rdf-files">
             <xsl:variable name="rdf-file" select="."/>
-			<xsl:variable name="rdf-name" select="replace(tokenize(string($rdf-file), '/')[last()], '\.[Rr][Dd][Ff]$', '')"/>            
-            <xsl:variable name="output-file" select="resolve-uri('../Outputs/' || $rdf-name || '.dot', static-base-uri())"/>
+			<xsl:variable name="rdf-name" select="replace(tokenize(string($rdf-file), '/')[last()], '\.[Rr][Dd][Ff]$', '')"/>        
+			<xsl:variable name="output-uri" select="resolve-uri(concat($output-folder, if (ends-with($output-folder, '/')) then '' else '/', $rdf-name, '.dot' ),static-base-uri() )"/>			 
             <xsl:variable name="document" select="doc($rdf-file)"/>
             <xsl:message select="'Processing: ', tokenize(string($rdf-file), '/')[last()]"/>
-			<xsl:result-document href="{$output-file}" method="text" encoding="UTF-8">            
-                <xsl:text>digraph Diagram {&#10;</xsl:text>
+			<xsl:result-document href="{$output-uri}" method="text"  encoding="UTF-8">
+			    <xsl:text>digraph Diagram {&#10;</xsl:text>
                 <xsl:text>     rankdir=LR; ordering=out; concentrate=true; splines=polyline; nodesep=0.1; ranksep=0.5;&#10;</xsl:text>
                 <xsl:text>     graph [label=&lt;&lt;table border="0" cellborder="0" cellspacing="0">&lt;tr>&lt;td align="left">&lt;font point-size="14">&lt;b></xsl:text>
                 <xsl:value-of select="f:format-title($rdf-name)"/>
@@ -171,4 +179,5 @@
              </xsl:result-document> 
         </xsl:for-each>
     </xsl:template>
+    
 </xsl:stylesheet>

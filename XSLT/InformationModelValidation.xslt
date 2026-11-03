@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ===============================================================================================
-    Validates the Information Model as contained in a set of .rdf files in a single RDF folder.
-	Outputs the validation results in a single Markdown file.
+	Validates a collection of RDF/XML files representing the GOV.UK Information Model. It identifies violations of naming, language and
+	IRI conventions, then generates a single Markdown validation report. The range of validation steps will grow over time as the standards
+	to be applied to the Information Model also grow. The XML files are the result of converting the Information Model's TTL files as edited
+	by IAs.
 
 	Command Line:
-	java -jar "tools/saxon-he-10.9.jar" -xsl:"XSLT/InformationModelValidation.xslt" -it:main -o:"Outputs/InformationModelValidation.md"
+	java -jar "tools/saxon-he-10.9.jar"
+		-xsl:"XSLT/InformationModelValidation.xslt" 
+		-it:main 
+		-o:"Outputs/InformationModelValidation.md" 
+		rdf-folder="../RDF/"
      ============================================================================================== -->
 
 <xsl:stylesheet version="3.0" 
@@ -15,7 +21,7 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     
-    <xsl:param name="rdf-folder" as="xs:string" select="'../RDF'"/>
+    <xsl:param name="rdf-folder" as="xs:string"/>
     
     <!-- ============================================================================================ -->
     <xsl:template name="markdown">
@@ -90,15 +96,12 @@
             <xsl:for-each select="$document">
 				<xsl:text>|</xsl:text>
 				<xsl:variable name="result1"><xsl:call-template name="check-missing-en-gb"/></xsl:variable>
-				<xsl:value-of select="if ($result1/result/errorcount > 0) then $result1/result/errormessage else ''"/>     
-				           
+				<xsl:value-of select="if ($result1/result/errorcount > 0) then $result1/result/errormessage else ''"/>        
 				<xsl:variable name="result2"><xsl:call-template name="check-pascal-case"/></xsl:variable>
 				<xsl:value-of select="if ($result2/result/errorcount > 0) then $result2/result/errormessage else ''"/>      
-				          
 				<xsl:variable name="result3"><xsl:call-template name="check-IRI"/></xsl:variable>
 				<xsl:value-of select="if ($result3/result/errorcount1 > 0) then $result3/result/errormessage1 else ''"/>    
 				<xsl:value-of select="if ($result3/result/errorcount2 > 0) then $result3/result/errormessage2 else ''"/>    
-				            
 				<xsl:if test="($result1/result/errorcount + $result2/result/errorcount + $result3/result/errorcount1 + $result3/result/errorcount2) &lt; 1">0</xsl:if>
                 <xsl:text>| &#10;</xsl:text>
             </xsl:for-each>

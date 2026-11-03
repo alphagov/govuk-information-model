@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ===============================================================================================
-    Generates core metrics for the Information Model as contained in a set of .rdf files in a single RDF folder.
-	Outputs the metrics in a single Markdown file.
+    Analyses a collection of RDF/XML files representing the GOV.UK Information Model and generates a consolidated Markdown report
+	of key structural metrics. The range of metrics generated will grow over time as the Information Model grows. The XML files are the
+	result of converting the Information Model's TTL files as edited by IAs.
 
 	Command Line:
-	java -jar "tools/saxon-he-10.9.jar" -xsl:"XSLT/InformationModelMetrics.xslt" -it:main -o:"Outputs/InformationModelMetrics.md"
-     ============================================================================================== -->
+	java -jar "tools/saxon-he-10.9.jar"
+		-xsl:"XSLT/InformationModelMetrics.xslt" 
+		-it:main 
+		-o:"Outputs/InformationModelMetrics.md"
+		rdf-folder="../RDF/"
+	   ============================================================================================== -->
 
 <xsl:stylesheet version="3.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -17,19 +22,12 @@
     xmlns:local="local:local-functions"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
 
-    <xsl:param name="rdf-folder" as="xs:string" select="'../RDF'"/>
+    <xsl:param name="rdf-folder" as="xs:string"/>
 
    <!-- ============================================================================================ -->
 	<xsl:function name="local:depth" as="xs:integer">
 		<xsl:param name="concept" as="element(skos:Concept)"/>
-		<xsl:sequence select="
-			if ($concept/skos:broader) then
-				1 + max(
-					for $parent in $concept/skos:broader
-					return local:depth(root($concept)//*[@rdf:about = $parent/@rdf:resource])
-				)
-			else 1
-		"/>
+		<xsl:sequence select="if ($concept/skos:broader) then 1 + max(for $parent in $concept/skos:broader return local:depth(root($concept)//*[@rdf:about = $parent/@rdf:resource])) else 1"/>
 	</xsl:function>
 
    <!-- ============================================================================================ -->
@@ -74,7 +72,6 @@
         </xsl:for-each>
         <xsl:text> | &#10; </xsl:text>
         <xsl:text> &#10; </xsl:text>
-
         <xsl:call-template name="taxonomylistmarkdown"/>
         <xsl:for-each select="$rdf-files[contains(., 'Taxonomy')]">
 			<xsl:sort select="."/>
@@ -90,6 +87,6 @@
             <xsl:text>| &#10;</xsl:text>
         </xsl:for-each>
         <xsl:text> &#10; </xsl:text>
-        
     </xsl:template>
+    
 </xsl:stylesheet>
