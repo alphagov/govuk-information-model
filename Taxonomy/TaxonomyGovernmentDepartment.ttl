@@ -1,0 +1,520 @@
+@prefix : <https://gov.uk/ontology/TaxonomyDepartment#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gds: <https://gov.uk/ontology/TaxonomyDepartment#gds:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://gov.uk/ontology/TaxonomyDepartment#> .
+
+<https://gov.uk/ontology/TaxonomyDepartment> rdf:type owl:Ontology ;
+                                                         dcterms:source <https://gov.uk/ontologies/organisations> ;
+                                                         rdfs:comment "A SKOS concept scheme describing UK central government departments. Starter taxonomy; verify names and status against GOV.UK before production use."@en-gb ;
+                                                         rdfs:label "UK Government Department Taxonomy"@en-gb ;
+                                                         owl:versionInfo "1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+skos:hasTopConcept rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+skos:topConceptOf rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://gov.uk/ontology/TaxonomyDepartment#government-departments
+<https://gov.uk/ontology/TaxonomyDepartment#government-departments> rdf:type owl:NamedIndividual ,
+                                                     skos:ConceptScheme ;
+                                            dcterms:source <https://gov.uk/ontologies/organisations> ;
+                                            skos:definition "A taxonomy of ministerial and non-ministerial departments of the UK government."@en-gb ;
+                                            skos:hasTopConcept <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ,
+                                                               <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                            skos:prefLabel "UK Government Departments"@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#attorney-generals-office
+<https://gov.uk/ontology/TaxonomyDepartment#attorney-generals-office> rdf:type owl:NamedIndividual ,
+                                                                              skos:Concept ;
+                                                                     skos:altLabel "AGO"@en-gb ;
+                                                                     skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                     skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                     skos:prefLabel "Attorney General's Office"@en-gb ;
+                                                                     skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#cabinet-office
+<https://gov.uk/ontology/TaxonomyDepartment#cabinet-office> rdf:type owl:NamedIndividual ,
+                                                                    skos:Concept ;
+                                                           skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                           skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                           skos:prefLabel "Cabinet Office"@en-gb ;
+                                                           skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#charity-commission
+<https://gov.uk/ontology/TaxonomyDepartment#charity-commission> rdf:type owl:NamedIndividual ,
+                                                                        skos:Concept ;
+                                                               skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                               skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                               skos:prefLabel "The Charity Commission"@en-gb ;
+                                                               skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#competition-and-markets-authority
+<https://gov.uk/ontology/TaxonomyDepartment#competition-and-markets-authority> rdf:type owl:NamedIndividual ,
+                                                                                       skos:Concept ;
+                                                                              skos:altLabel "CMA"@en-gb ;
+                                                                              skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                              skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                              skos:prefLabel "Competition and Markets Authority"@en-gb ;
+                                                                              skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#crown-prosecution-service
+<https://gov.uk/ontology/TaxonomyDepartment#crown-prosecution-service> rdf:type owl:NamedIndividual ,
+                                                                               skos:Concept ;
+                                                                      skos:altLabel "CPS"@en-gb ;
+                                                                      skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                      skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                      skos:prefLabel "Crown Prosecution Service"@en-gb ;
+                                                                      skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#department-for-business-and-trade
+<https://gov.uk/ontology/TaxonomyDepartment#department-for-business-and-trade> rdf:type owl:NamedIndividual ,
+                                                                                       skos:Concept ;
+                                                                              skos:altLabel "DBT"@en-gb ;
+                                                                              skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                              skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                              skos:prefLabel "Department for Business and Trade"@en-gb ;
+                                                                              skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#department-for-culture-media-and-sport
+<https://gov.uk/ontology/TaxonomyDepartment#department-for-culture-media-and-sport> rdf:type owl:NamedIndividual ,
+                                                                                            skos:Concept ;
+                                                                                   skos:altLabel "DCMS"@en-gb ;
+                                                                                   skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                                   skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                                   skos:prefLabel "Department for Culture, Media and Sport"@en-gb ;
+                                                                                   skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#department-for-education
+<https://gov.uk/ontology/TaxonomyDepartment#department-for-education> rdf:type owl:NamedIndividual ,
+                                                                              skos:Concept ;
+                                                                     skos:altLabel "DfE"@en-gb ;
+                                                                     skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                     skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                     skos:prefLabel "Department for Education"@en-gb ;
+                                                                     skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#department-for-energy-security-and-net-zero
+<https://gov.uk/ontology/TaxonomyDepartment#department-for-energy-security-and-net-zero> rdf:type owl:NamedIndividual ,
+                                                                                                 skos:Concept ;
+                                                                                        skos:altLabel "DESNZ"@en-gb ;
+                                                                                        skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                                        skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                                        skos:prefLabel "Department for Energy Security and Net Zero"@en-gb ;
+                                                                                        skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#department-for-environment-food-and-rural-affairs
+<https://gov.uk/ontology/TaxonomyDepartment#department-for-environment-food-and-rural-affairs> rdf:type owl:NamedIndividual ,
+                                                                                                       skos:Concept ;
+                                                                                              skos:altLabel "Defra"@en-gb ;
+                                                                                              skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                                              skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                                              skos:prefLabel "Department for Environment, Food & Rural Affairs"@en-gb ;
+                                                                                              skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#department-for-science-innovation-and-technology
+<https://gov.uk/ontology/TaxonomyDepartment#department-for-science-innovation-and-technology> rdf:type owl:NamedIndividual ,
+                                                                                                      skos:Concept ;
+                                                                                             skos:altLabel "DSIT"@en-gb ;
+                                                                                             skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                                             skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                                             skos:prefLabel "Department for Science, Innovation and Technology"@en-gb ;
+                                                                                             skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#department-for-transport
+<https://gov.uk/ontology/TaxonomyDepartment#department-for-transport> rdf:type owl:NamedIndividual ,
+                                                                              skos:Concept ;
+                                                                     skos:altLabel "DfT"@en-gb ;
+                                                                     skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                     skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                     skos:prefLabel "Department for Transport"@en-gb ;
+                                                                     skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#department-for-work-and-pensions
+<https://gov.uk/ontology/TaxonomyDepartment#department-for-work-and-pensions> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept ;
+                                                                             skos:altLabel "DWP"@en-gb ;
+                                                                             skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                             skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                             skos:prefLabel "Department for Work and Pensions"@en-gb ;
+                                                                             skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#department-of-health-and-social-care
+<https://gov.uk/ontology/TaxonomyDepartment#department-of-health-and-social-care> rdf:type owl:NamedIndividual ,
+                                                                                          skos:Concept ;
+                                                                                 skos:altLabel "DHSC"@en-gb ;
+                                                                                 skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                                 skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                                 skos:prefLabel "Department of Health and Social Care"@en-gb ;
+                                                                                 skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#food-standards-agency
+<https://gov.uk/ontology/TaxonomyDepartment#food-standards-agency> rdf:type owl:NamedIndividual ,
+                                                                           skos:Concept ;
+                                                                  skos:altLabel "FSA"@en-gb ;
+                                                                  skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                  skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                  skos:prefLabel "Food Standards Agency"@en-gb ;
+                                                                  skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#foreign-commonwealth-and-development-office
+<https://gov.uk/ontology/TaxonomyDepartment#foreign-commonwealth-and-development-office> rdf:type owl:NamedIndividual ,
+                                                                                                 skos:Concept ;
+                                                                                        skos:altLabel "FCDO"@en-gb ;
+                                                                                        skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                                        skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                                        skos:prefLabel "Foreign, Commonwealth & Development Office"@en-gb ;
+                                                                                        skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#forestry-commission
+<https://gov.uk/ontology/TaxonomyDepartment#forestry-commission> rdf:type owl:NamedIndividual ,
+                                                                         skos:Concept ;
+                                                                skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                skos:prefLabel "Forestry Commission"@en-gb ;
+                                                                skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#government-actuarys-department
+<https://gov.uk/ontology/TaxonomyDepartment#government-actuarys-department> rdf:type owl:NamedIndividual ,
+                                                                                    skos:Concept ;
+                                                                           skos:altLabel "GAD"@en-gb ;
+                                                                           skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                           skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                           skos:prefLabel "Government Actuary's Department"@en-gb ;
+                                                                           skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#government-legal-department
+<https://gov.uk/ontology/TaxonomyDepartment#government-legal-department> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:altLabel "GLD"@en-gb ;
+                                                                        skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                        skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                        skos:prefLabel "Government Legal Department"@en-gb ;
+                                                                        skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#hm-land-registry
+<https://gov.uk/ontology/TaxonomyDepartment#hm-land-registry> rdf:type owl:NamedIndividual ,
+                                                                      skos:Concept ;
+                                                             skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                             skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                             skos:prefLabel "HM Land Registry"@en-gb ;
+                                                             skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#hm-revenue-and-customs
+<https://gov.uk/ontology/TaxonomyDepartment#hm-revenue-and-customs> rdf:type owl:NamedIndividual ,
+                                                                            skos:Concept ;
+                                                                   skos:altLabel "HMRC"@en-gb ;
+                                                                   skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                   skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                   skos:prefLabel "HM Revenue & Customs"@en-gb ;
+                                                                   skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#hm-treasury
+<https://gov.uk/ontology/TaxonomyDepartment#hm-treasury> rdf:type owl:NamedIndividual ,
+                                                                 skos:Concept ;
+                                                        skos:altLabel "HMT"@en-gb ,
+                                                                      "Treasury"@en-gb ;
+                                                        skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                        skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                        skos:prefLabel "HM Treasury"@en-gb ;
+                                                        skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#home-office
+<https://gov.uk/ontology/TaxonomyDepartment#home-office> rdf:type owl:NamedIndividual ,
+                                                                 skos:Concept ;
+                                                        skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                        skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                        skos:prefLabel "Home Office"@en-gb ;
+                                                        skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments
+<https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> rdf:type owl:NamedIndividual ,
+                                                                             skos:Concept ;
+                                                                    skos:definition "Departments led by a government minister and forming part of the ministerial department category on GOV.UK."@en-gb ;
+                                                                    skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                    skos:prefLabel "Ministerial departments"@en-gb ;
+                                                                    skos:topConceptOf <https://gov.uk/ontology/TaxonomyDepartment#government-departments> .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#ministry-of-defence
+<https://gov.uk/ontology/TaxonomyDepartment#ministry-of-defence> rdf:type owl:NamedIndividual ,
+                                                                         skos:Concept ;
+                                                                skos:altLabel "MoD"@en-gb ;
+                                                                skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                skos:prefLabel "Ministry of Defence"@en-gb ;
+                                                                skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#ministry-of-housing-communities-and-local-government
+<https://gov.uk/ontology/TaxonomyDepartment#ministry-of-housing-communities-and-local-government> rdf:type owl:NamedIndividual ,
+                                                                                                          skos:Concept ;
+                                                                                                 skos:altLabel "MHCLG"@en-gb ;
+                                                                                                 skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                                                 skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                                                 skos:prefLabel "Ministry of Housing, Communities and Local Government"@en-gb ;
+                                                                                                 skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#ministry-of-justice
+<https://gov.uk/ontology/TaxonomyDepartment#ministry-of-justice> rdf:type owl:NamedIndividual ,
+                                                                         skos:Concept ;
+                                                                skos:altLabel "MoJ"@en-gb ;
+                                                                skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                skos:prefLabel "Ministry of Justice"@en-gb ;
+                                                                skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#national-archives
+<https://gov.uk/ontology/TaxonomyDepartment#national-archives> rdf:type owl:NamedIndividual ,
+                                                                       skos:Concept ;
+                                                              skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                              skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                              skos:prefLabel "The National Archives"@en-gb ;
+                                                              skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#national-crime-agency
+<https://gov.uk/ontology/TaxonomyDepartment#national-crime-agency> rdf:type owl:NamedIndividual ,
+                                                                           skos:Concept ;
+                                                                  skos:altLabel "NCA"@en-gb ;
+                                                                  skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                  skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                  skos:prefLabel "National Crime Agency"@en-gb ;
+                                                                  skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#national-savings-and-investments
+<https://gov.uk/ontology/TaxonomyDepartment#national-savings-and-investments> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept ;
+                                                                             skos:altLabel "NS&I"@en-gb ;
+                                                                             skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                             skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                             skos:prefLabel "National Savings and Investments"@en-gb ;
+                                                                             skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments
+<https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> rdf:type owl:NamedIndividual ,
+                                                                                 skos:Concept ;
+                                                                        skos:definition "Departments that are not headed by a government minister, as categorised on GOV.UK."@en-gb ;
+                                                                        skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                        skos:prefLabel "Non-ministerial departments"@en-gb ;
+                                                                        skos:topConceptOf <https://gov.uk/ontology/TaxonomyDepartment#government-departments> .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#northern-ireland-office
+<https://gov.uk/ontology/TaxonomyDepartment#northern-ireland-office> rdf:type owl:NamedIndividual ,
+                                                                             skos:Concept ;
+                                                                    skos:altLabel "NIO"@en-gb ;
+                                                                    skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                    skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                    skos:prefLabel "Northern Ireland Office"@en-gb ;
+                                                                    skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#office-of-rail-and-road
+<https://gov.uk/ontology/TaxonomyDepartment#office-of-rail-and-road> rdf:type owl:NamedIndividual ,
+                                                                             skos:Concept ;
+                                                                    skos:altLabel "ORR"@en-gb ;
+                                                                    skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                    skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                    skos:prefLabel "Office of Rail and Road"@en-gb ;
+                                                                    skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#office-of-the-advocate-general-for-scotland
+<https://gov.uk/ontology/TaxonomyDepartment#office-of-the-advocate-general-for-scotland> rdf:type owl:NamedIndividual ,
+                                                                                                 skos:Concept ;
+                                                                                        skos:altLabel "OAG Scotland"@en-gb ;
+                                                                                        skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                                        skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                                        skos:prefLabel "Office of the Advocate General for Scotland"@en-gb ;
+                                                                                        skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#office-of-the-leader-of-the-house-of-commons
+<https://gov.uk/ontology/TaxonomyDepartment#office-of-the-leader-of-the-house-of-commons> rdf:type owl:NamedIndividual ,
+                                                                                                  skos:Concept ;
+                                                                                         skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                                                         skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                                         skos:prefLabel "Office of the Leader of the House of Commons"@en-gb ;
+                                                                                         skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#ofgem
+<https://gov.uk/ontology/TaxonomyDepartment#ofgem> rdf:type owl:NamedIndividual ,
+                                                           skos:Concept ;
+                                                  skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                  skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                  skos:prefLabel "Ofgem"@en-gb ;
+                                                  skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#ofqual
+<https://gov.uk/ontology/TaxonomyDepartment#ofqual> rdf:type owl:NamedIndividual ,
+                                                            skos:Concept ;
+                                                   skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                   skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                   skos:prefLabel "Ofqual"@en-gb ;
+                                                   skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#ofsted
+<https://gov.uk/ontology/TaxonomyDepartment#ofsted> rdf:type owl:NamedIndividual ,
+                                                            skos:Concept ;
+                                                   skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                   skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                   skos:prefLabel "Ofsted"@en-gb ;
+                                                   skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#ofwat
+<https://gov.uk/ontology/TaxonomyDepartment#ofwat> rdf:type owl:NamedIndividual ,
+                                                           skos:Concept ;
+                                                  skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                  skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                  skos:prefLabel "Ofwat"@en-gb ;
+                                                  skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#scotland-office
+<https://gov.uk/ontology/TaxonomyDepartment#scotland-office> rdf:type owl:NamedIndividual ,
+                                                                     skos:Concept ;
+                                                            skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                            skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                            skos:prefLabel "Scotland Office"@en-gb ;
+                                                            skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#serious-fraud-office
+<https://gov.uk/ontology/TaxonomyDepartment#serious-fraud-office> rdf:type owl:NamedIndividual ,
+                                                                          skos:Concept ;
+                                                                 skos:altLabel "SFO"@en-gb ;
+                                                                 skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                 skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                 skos:prefLabel "Serious Fraud Office"@en-gb ;
+                                                                 skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#supreme-court-of-the-united-kingdom
+<https://gov.uk/ontology/TaxonomyDepartment#supreme-court-of-the-united-kingdom> rdf:type owl:NamedIndividual ,
+                                                                                         skos:Concept ;
+                                                                                skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                                skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                                skos:prefLabel "Supreme Court of the United Kingdom"@en-gb ;
+                                                                                skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#uk-export-finance
+<https://gov.uk/ontology/TaxonomyDepartment#uk-export-finance> rdf:type owl:NamedIndividual ,
+                                                                       skos:Concept ;
+                                                              skos:altLabel "UKEF"@en-gb ;
+                                                              skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                              skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                              skos:prefLabel "UK Export Finance"@en-gb ;
+                                                              skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#uk-statistics-authority
+<https://gov.uk/ontology/TaxonomyDepartment#uk-statistics-authority> rdf:type owl:NamedIndividual ,
+                                                                             skos:Concept ;
+                                                                    skos:altLabel "UKSA"@en-gb ;
+                                                                    skos:broader <https://gov.uk/ontology/TaxonomyDepartment#non-ministerial-departments> ;
+                                                                    skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                                    skos:prefLabel "UK Statistics Authority"@en-gb ;
+                                                                    skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  https://gov.uk/ontology/TaxonomyDepartment#wales-office
+<https://gov.uk/ontology/TaxonomyDepartment#wales-office> rdf:type owl:NamedIndividual ,
+                                                                  skos:Concept ;
+                                                         skos:broader <https://gov.uk/ontology/TaxonomyDepartment#ministerial-departments> ;
+                                                         skos:inScheme <https://gov.uk/ontology/TaxonomyDepartment#government-departments> ;
+                                                         skos:prefLabel "Wales Office"@en-gb ;
+                                                         skos:scopeNote "Department name based on the GOV.UK organisations directory; check current status and naming before operational use."@en-gb .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
