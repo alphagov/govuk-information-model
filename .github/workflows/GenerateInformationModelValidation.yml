@@ -30,7 +30,7 @@ jobs:
         - name: Run Saxon
           shell: bash
           run: >
-            java -jar "Tools/saxon-he-10.9.jar" -xsl:"XSLT/InformationModelValidation.xslt" -it:main -o:"Outputs/InformationModelValidation.md"
+            java -jar "Tools/Saxon-HE-10.9.jar" -xsl:"XSLT/InformationModelValidation.xslt" -it:main -o:"Outputs/InformationModelValidation.md"
             rdf-folder="../RDF/"
 
         - name: Show output files
