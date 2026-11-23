@@ -37,6 +37,12 @@ jobs:
           shell: bash
           run: find Outputs -type f
 
+        - name: Check Git changes
+          shell: bash
+          run: |
+            git status --short
+            git diff -- Outputs/InformationModelValidation.md
+
         - name: Commit generated validation results
           shell: bash
           run: |
